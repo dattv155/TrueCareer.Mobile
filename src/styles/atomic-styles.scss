@@ -1,0 +1,33 @@
+@import "src/styles/partials/text-base";
+@import "src/styles/partials/background";
+@import "src/styles/partials/typography";
+@import "src/styles/partials/layout";
+@import "src/styles/partials/flexbox";
+@import "src/styles/partials/spacing";
+
+
+@import "mixins";
+
+@import "variable";
+
+@import "text";
+
+@import "colors";
+
+.borderView {
+  background: #FFFFFF;
+  border: 1px solid #EDEDED;
+  box-sizing: border-box;
+  border-radius: $border-radius;
+  padding: 2*$padding 4*$padding;
+  margin-top: 4 * $padding;
+}
+
+.borderRadius {
+  border-radius: $border-radius;
+}
+
+.boxShadow {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  elevation: 6;
+}

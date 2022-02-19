@@ -1,0 +1,96 @@
+@import "src/styles/mixins";
+
+.bold {
+  font-family: map-get($font-families, "bold");
+}
+
+.extraLight {
+  font-family: map-get($font-families, "extralight");
+}
+
+.italic {
+  font-family: map-get($font-families, "italic");
+}
+
+.light {
+  font-family: map-get($font-families, "light");
+}
+
+.medium {
+  font-family: map-get($font-families, "medium");
+}
+
+.regular {
+  font-family: map-get($font-families, "regular");
+}
+
+.semibold {
+  font-family: map-get($font-families, "semibold");
+}
+
+.thin {
+  font-family: map-get($font-families, "thin");
+}
+
+.textCenter {
+  text-align: center;
+}
+
+
+.textRight {
+  text-align: right;
+}
+
+
+.textPrimary {
+  color: map-get($colors, "text-primary");
+}
+
+.textSecondary {
+  color: map-get($colors, "text-secondary");
+}
+
+
+.textDark {
+  color: map-get($colors, "black");
+}
+
+
+.textBlue {
+  color: map-get($colors, "blue");
+}
+
+
+.textWhite {
+  color: map-get($colors, "white");
+}
+
+
+.textEggBlue {
+  color: map-get($colors, "robins-egg-blue");
+}
+
+
+.textSuccess {
+  color: map-get($colors, "green-lit");
+}
+
+
+.textError {
+  color: map-get($colors, "red");
+}
+
+
+.textNobel {
+  color: map-get($colors, "nobel");
+}
+
+
+.textGray {
+  color: map-get($colors, "gray");
+}
+
+
+.textValue {
+  color: rgba(0, 0, 0, 0.6);
+}

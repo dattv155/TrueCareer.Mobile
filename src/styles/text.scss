@@ -1,0 +1,69 @@
+@import "variable";
+@import "colors";
+
+
+.textBold {
+  font-family: map-get($font-families, "bold");
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 600;
+  color: map-get($colors, "text-primary");
+}
+
+.texRegular {
+  font-family: map-get($map: $font-families, $key: regular);
+  font-size: 15px;
+  color: map-get($colors, "text-primary");
+}
+
+.textSmall {
+  font-family: map-get($map: $font-families, $key: regular);
+  font-size: 13px;
+  color: map-get($colors, "text-primary");
+}
+
+.textTiny {
+  font-family: map-get($map: $font-families, $key: regular);
+  font-size: 11px;
+  color: map-get($colors, "text-primary");
+}
+
+.textItem {
+  font-family: map-get($map: $font-families, $key: regular);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.textDetail {
+  font-family: map-get($font-families, "light");
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.textInput {
+  padding: 0;
+}
+
+.textIrisColor {
+  color: map-get($colors, "blue-primary");
+}
+
+.textWarning {
+  color: map-get($colors, "yellow");
+}
+
+.textError{
+  color: map-get($colors, "red");
+}
+
+.textGray{
+  color: map-get($colors, "gray75");
+}
+
+.textNeutral{
+  color: map-get($colors, "neutral");
+}
+
+.textSpaceCadet {
+  color: map-get($colors, "space-cadet");
+}
