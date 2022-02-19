@@ -2,3 +2,23 @@
  * TabNavigator
  * 2022-02-20 02:37:27
  */
+@import "src/styles/mixins";
+
+.container {
+  flex: 1;
+  background-color: lightpink;
+}
+
+.tabBarStyle {
+  //
+}
+
+.tabBarLabelStyle {
+  font-family: map-get($font-families, "medium");
+  font-size: 12px;
+}
+
+.tabBarItemStyle {
+  padding-top: 8px;
+  margin-bottom: -4px;
+}

@@ -2,3 +2,10 @@
  * HomeScreen
  * 2022-02-20 02:57:58
  */
+
+@import "src/styles/mixins";
+
+.container {
+  background-color: map-get($colors, 'black');
+  //z-index: 10;
+}
