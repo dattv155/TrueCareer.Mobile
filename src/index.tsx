@@ -16,6 +16,7 @@ import {AppLanguage} from './types/AppLanguage';
 
 const App = React.lazy(async function () {
   await localization.initialize({
+    compatibilityJSON: 'v3',
     lng: AppLanguage.VIETNAMESE,
     fallbackLng: AppLanguage.VIETNAMESE,
     ns: '',
@@ -28,6 +29,16 @@ const App = React.lazy(async function () {
       suffix: '}}',
     },
   });
+  await localization.addLanguage(
+    AppLanguage.ENGLISH,
+    require('./i18n/en.json'),
+  );
+
+  await localization.addLanguage(
+    AppLanguage.VIETNAMESE,
+    require('./i18n/vi.json'),
+  );
+
   return import('./App');
 });
 
