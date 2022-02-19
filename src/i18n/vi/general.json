@@ -1,0 +1,21 @@
+{
+  "general.action.save": "Lưu",
+  "general.action.ok": "Đồng ý",
+  "general.action.cancel": "Huỷ",
+  "general.action.delete": "Xoá",
+  "general.action.edit": "Sửa",
+  "general.action.search": "Tìm kiếm",
+  "general.action.done": "Xong",
+  "general.action.select": "Chọn",
+  "general.action.selectDate": "Chọn ngày",
+  "general.action.filter": "Filter",
+  "general.action.type": "Nhập",
+  "general.action.note": "Ghi chú",
+  "general.action.add": "Thêm",
+  "general.action.comment": "Bình luận",
+  "general.action.approve": "Phê duyệt",
+  "general.action.refuse": "Từ chối",
+  "general.action.view": "Xem",
+  "general.action.next": "Tiếp theo",
+  "general.action.create": "Tạo"
+}

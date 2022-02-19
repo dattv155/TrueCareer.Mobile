@@ -1,0 +1,21 @@
+{
+  "general.action.save": "Save",
+  "general.action.ok": "Ok",
+  "general.action.cancel": "Cancel",
+  "general.action.delete": "Delete",
+  "general.action.edit": "Edit",
+  "general.action.search": "Search",
+  "general.action.done": "Done",
+  "general.action.select": "Select",
+  "general.action.selectDate": "Select date",
+  "general.action.filter": "Filter",
+  "general.action.type": "Type",
+  "general.action.note": "Note",
+  "general.action.add": "Add",
+  "general.action.comment": "Comment",
+  "general.action.approve": "Approve",
+  "general.action.refuse": "Refuse",
+  "general.action.view": "View",
+  "general.action.next": "Next",
+  "general.action.create": "Create"
+}
