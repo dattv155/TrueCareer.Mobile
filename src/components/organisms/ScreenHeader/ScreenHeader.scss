@@ -1,0 +1,17 @@
+/**
+ * ScreenHeader
+ * 2022-02-27 21:55:47
+ */
+@import "src/styles/mixins";
+
+.header {
+  //
+  background-color: map-get($colors, 'primary');
+}
+
+.headerContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

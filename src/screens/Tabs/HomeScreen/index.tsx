@@ -13,11 +13,6 @@ export function HomeScreen(
   return (
     <View style={[atomicStyles.flex, atomicStyles.p4, styles.container]}>
       <Text>Home</Text>
-      <Text>Home</Text>
-      <Text>Home</Text>
-      <Text>Home</Text>
-      <Text>Home</Text>
-      <Text>Home</Text>
     </View>
   );
 }
