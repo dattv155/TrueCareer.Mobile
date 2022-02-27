@@ -4,6 +4,10 @@
  */
 @import "src/styles/mixins";
 
+.headerContainer {
+  border-radius: 0 0 16px 16px;
+}
+
 .styleColorScroll {
   position: absolute;
   top: 0;
@@ -40,6 +44,12 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  font-size: 34px;
+  line-height: 41px;
+}
+
+.subTitle {
+
 }
 
 .right {
@@ -50,3 +60,9 @@
   align-items: center;
 }
 
+.underIcon {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}

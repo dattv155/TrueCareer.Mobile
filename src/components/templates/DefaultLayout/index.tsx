@@ -6,83 +6,57 @@ import type {StackScreenProps} from '@react-navigation/stack';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {atomicStyles, Colors} from 'src/styles';
 import type {ViewStyle} from 'react-native';
+import {Text} from 'react-native';
 import {TouchableOpacity, View} from 'react-native';
-import ScreenHeader from 'src/components/organisms/ScreenHeader';
-import HeaderIconPlaceholder from 'src/components/atoms/HeaderIconPlaceholder';
-import HeaderBackButton from 'src/components/atoms/HeaderBackButton';
-import HeaderTitle from 'src/components/atoms/HeaderTitle';
 import LoadingLayout from 'src/components/templates/LoadingLayout';
 import SvgIcon from 'src/components/atoms/SvgIcon';
+
+const HEIGHT: number = 214;
 
 export function DefaultLayout(
   props: PropsWithChildren<DefaultLayoutProps>,
 ): ReactElement {
   const {
-    navigation,
     title,
-    left,
-    right,
     children,
     contentScrollable,
     contentContainerStyle,
-    onCancel,
-    onFilter,
     footer,
     loading,
+    subTitle,
+    icon,
   } = props;
 
-  const leftChilds = React.Children.toArray(left);
-
-  const rightChilds = React.Children.toArray(right);
-
-  if (leftChilds.length > 2 || rightChilds.length > 2) {
-    throw new Error(
-      'One header side can not contain more than 2 icon elements',
-    );
-  }
-
-  const titleIsString: boolean = typeof title === 'string';
-
   const layout: ReactElement = (
-    <SafeAreaView style={[atomicStyles.flexGrow, atomicStyles.mt2]}>
-      <ScreenHeader style={[atomicStyles.py1]}>
-        {!left ? (
-          <HeaderIconPlaceholder />
-        ) : typeof left === 'string' && left === 'back-button' ? (
-          <HeaderBackButton navigation={navigation} />
-        ) : (
-          leftChilds
-        )}
-
-        <View style={styles.titleHeader}>
-          {titleIsString ? <HeaderTitle>{title}</HeaderTitle> : title}
+    <SafeAreaView style={[atomicStyles.flexGrow]}>
+      <View
+        style={[{height: HEIGHT}, atomicStyles.px6, styles.headerContainer]}>
+        <View
+          style={[
+            atomicStyles.flexRow,
+            atomicStyles.alignItemsCenter,
+            atomicStyles.justifyContentBetween,
+            atomicStyles.pt8,
+          ]}>
+          <Text style={[atomicStyles.textWhite, styles.titleHeader]}>
+            {title}
+          </Text>
+          <TouchableOpacity>
+            <SvgIcon component={require('assets/icons/26/chat.svg')} />
+          </TouchableOpacity>
         </View>
-        {!right ? (
-          <HeaderIconPlaceholder />
-        ) : typeof right === 'string' && right === 'search-filter' ? (
-          <View style={[atomicStyles.flexRow, styles.right]}>
-            <TouchableOpacity onPress={onCancel} style={[atomicStyles.pr4]}>
-              <SvgIcon
-                component={require('assets/icons/24/search-white.svg')}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity onPress={onFilter}>
-              <SvgIcon
-                component={require('assets/icons/24/filter-white.svg')}
-              />
-            </TouchableOpacity>
-          </View>
-        ) : (
-          <View style={styles.right}>
-            {titleIsString && rightChilds.length < 2 && (
-              <HeaderIconPlaceholder />
-            )}
-            {titleIsString && rightChilds.length < 1 && (
-              <HeaderIconPlaceholder />
-            )}
-          </View>
-        )}
-      </ScreenHeader>
+        <Text
+          style={[
+            atomicStyles.bold,
+            atomicStyles.textWhite,
+            atomicStyles.h4,
+            atomicStyles.mt4,
+            styles.subTitle,
+          ]}>
+          {subTitle}
+        </Text>
+        <View style={[styles.underIcon]}>{icon}</View>
+      </View>
       <View
         style={[
           atomicStyles.flex,
@@ -113,27 +87,17 @@ export function DefaultLayout(
 export interface DefaultLayoutProps extends StackScreenProps<any> {
   contentScrollable: boolean;
 
-  isLeftIcon?: boolean;
-
   title?: string;
 
-  left?: ReactElement | string | undefined;
-
-  right?: ReactElement | string | undefined;
-
   contentContainerStyle?: ViewStyle | ViewStyle[];
-
-  searchTabVisible?: boolean;
-
-  onCancel?: () => void;
-
-  onFilter?: () => void;
-
-  onSearch?: (value: string) => void;
 
   footer?: ReactElement;
 
   loading?: boolean;
+
+  subTitle?: string;
+
+  icon?: ReactElement;
 }
 
 DefaultLayout.defaultProps = {
