@@ -27,7 +27,7 @@
 
 
 .bgLightGray {
-  background-color: map-get($colors, "light-gray");
+  background-color: map-get($colors, "gray10");
 }
 
 
@@ -37,7 +37,7 @@
 
 
 .bgDanger {
-  background-color: map-get($colors, "danger");
+  background-color: map-get($colors, "red");
 }
 
 

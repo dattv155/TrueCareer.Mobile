@@ -1,14 +1,29 @@
 import {configureStore} from '@reduxjs/toolkit';
+import {appSettingsSlice} from 'src/store/app-settings';
+import {authenticationSlice} from 'src/store/authentication';
+import {themeSlice} from 'src/store/theme';
+import {conversationSlice} from './conversation';
 
-const middlewares = [];
+const middleware = [
+  /* other middlewares */
+];
 
 if (__DEV__) {
-  const rnFlipper = require('rn-redux-middleware-flipper').default;
-  const reduxFlipper = require('redux-flipper').default;
-  middlewares.push(rnFlipper(), reduxFlipper());
+  const createDebugger = require('redux-flipper').default;
+  middleware.push(createDebugger());
+  const createFlipperMiddleware =
+    require('rn-redux-middleware-flipper').default;
+  middleware.push(createFlipperMiddleware());
 }
 
-export const store = configureStore({
-  reducer: {},
-  middleware: middlewares,
+const store = configureStore({
+  reducer: {
+    appSettings: appSettingsSlice.reducer,
+    authentication: authenticationSlice.reducer,
+    conversation: conversationSlice.reducer,
+    theming: themeSlice.reducer,
+  },
+  middleware,
 });
+
+export default store;

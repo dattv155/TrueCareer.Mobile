@@ -1,12 +1,12 @@
-@import "colors";
-
-
 $font-families: (
-        light: SVN-GilroyLight,
-        regular: SVN-GilroyLight,
-        medium: SVN-GilroyLight,
-        semibold: SVN-GilroyBold,
-        bold: SVN-GilroyBold,
+    bold: IBMPlexSans-Bold,
+    extralight: IBMPlexSans-ExtraLight,
+    italic: IBMPlexSans-Italic,
+    light: IBMPlexSans-Light,
+    medium: IBMPlexSans-Medium,
+    regular: IBMPlexSans-Regular,
+    semibold: IBMPlexSans-SemiBold,
+    thin: IBMPlexSans-Thin,
 );
 
 $border-radius: 4px;

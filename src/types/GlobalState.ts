@@ -1,22 +1,31 @@
-import type {AppLanguage} from 'src/types/AppLanguage';
-import type {AppUser, GlobalUser} from 'src/models';
+import type {AppLanguage} from './AppLanguage';
+import type {AppUser} from 'src/models';
+import type {GlobalUser} from 'src/models';
+import type {GeoPosition} from 'react-native-geolocation-service';
+import type {ConversationMessage} from 'src/models/ConversationMessage';
 
 export interface GlobalState {
   appSettings: {
     language: AppLanguage;
 
-    // currentTheme: string;
+    baseUrl: string;
 
-    // themes: Record<string, ThemeStyle>;
+    location?: GeoPosition;
   };
 
   authentication: {
-    userId?: number | string;
+    userId?: number;
 
-    user?: AppUser;
+    user?: AppUser | null | undefined;
 
-    token?: string;
+    token?: string | null;
 
-    globalUser?: GlobalUser;
+    refreshToken?: string | null;
+
+    globalUser?: GlobalUser | null | undefined;
+  };
+
+  conversation: {
+    message?: ConversationMessage;
   };
 }
