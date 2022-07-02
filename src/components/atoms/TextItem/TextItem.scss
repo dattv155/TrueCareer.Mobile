@@ -1,0 +1,15 @@
+/**
+ * TextItem
+ * 2022-03-01 23:52:51
+ */
+@import "src/styles/mixins";
+
+.container {
+  background-color: map-get($colors, 'primary');
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.text {
+
+}

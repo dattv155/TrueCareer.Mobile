@@ -4,10 +4,12 @@ import type {PropsWithChildren, ReactElement} from 'react';
 import nameof from 'ts-nameof.macro';
 import type {StackScreenProps} from '@react-navigation/stack';
 import DefaultLayout from 'src/components/templates/DefaultLayout';
-import {Text, View} from 'react-native';
+import {ScrollView, TouchableOpacity, View} from 'react-native';
 import {useTranslation} from 'react-i18next';
 import {atomicStyles} from 'src/styles';
 import SvgIcon from 'src/components/atoms/SvgIcon';
+import SearchBox from 'src/components/morecules/SearchBox';
+import MentorItem from 'src/components/morecules/MentorItem';
 
 export function MentorScreen(
   props: PropsWithChildren<MentorScreenProps>,
@@ -29,16 +31,34 @@ export function MentorScreen(
         contentScrollable={true}
         navigation={navigation}
         route={route}>
-        <View>
-          <Text
+        <ScrollView style={[atomicStyles.px4]}>
+          <View
             style={[
-              atomicStyles.h5,
-              atomicStyles.textPrimary,
-              atomicStyles.textBold,
+              atomicStyles.flexRow,
+              atomicStyles.alignItemsCenter,
+              atomicStyles.justifyContentBetween,
+              atomicStyles.mb4,
             ]}>
-            {translate('Mentor')}
-          </Text>
-        </View>
+            <SearchBox
+              placeholder={translate('Tìm kiếm Mentor theo trường/ngành/...')}
+              style={[atomicStyles.mr2]}
+            />
+            <TouchableOpacity
+              style={[
+                atomicStyles.borderView,
+                atomicStyles.alignItemsCenter,
+                atomicStyles.justifyContentBetween,
+                atomicStyles.bgWhite,
+                atomicStyles.p3,
+              ]}>
+              <SvgIcon component={require('assets/icons/filter-purple.svg')} />
+            </TouchableOpacity>
+          </View>
+
+          <MentorItem style={[atomicStyles.mb4]} />
+          <MentorItem style={[atomicStyles.mb4]} />
+          <MentorItem style={[atomicStyles.mb4]} />
+        </ScrollView>
       </DefaultLayout>
     </>
   );

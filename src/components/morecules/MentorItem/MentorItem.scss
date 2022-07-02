@@ -1,0 +1,47 @@
+/**
+ * MentorItem
+ * 2022-02-28 23:35:35
+ */
+@import "src/styles/mixins";
+
+.heartItem {
+  border: map-get($colors, 'red');
+}
+
+.heartText {
+  color: map-get($colors, 'red');
+  font-weight: 700;
+}
+
+.connectionItem {
+  border: map-get($colors, 'primary');
+}
+
+.connectionText {
+  color: map-get($colors, 'primary');
+  font-weight: 700;
+}
+
+.textName {
+  color: map-get($colors, 'primary');
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.infoContainer {
+}
+
+.textTitle {
+  color: map-get($colors, 'black');
+  font-weight: 700;
+}
+
+.textSub {
+  color: map-get($colors, 'black');
+}
+
+.titleContainer {
+  margin-top: 8px;
+  height: 30px;
+  z-index: 10;
+}

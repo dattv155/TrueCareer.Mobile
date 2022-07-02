@@ -1,0 +1,14 @@
+/**
+ * PersonalInfoView
+ * 2022-03-01 23:33:56
+ */
+@import "src/styles/mixins";
+
+.textTitle {
+  color: map-get($colors, 'black');
+  font-weight: 700;
+}
+
+.textSub {
+  color: map-get($colors, 'black');
+}
