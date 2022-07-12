@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "302066388229",
+    "project_id": "truecareer-159",
+    "storage_bucket": "truecareer-159.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302066388229:android:475b2953aa2710ec4abb6c",
+        "android_client_info": {
+          "package_name": "com.truecareer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "302066388229-bqvvpsq37jq6s9e3ncpk3a63530vkhl8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.truecareer",
+            "certificate_hash": "84b9565964c9d062e5f52b54b1e41783a51464b5"
+          }
+        },
+        {
+          "client_id": "302066388229-gc27b5neqru3g2qmst26e6qjf345p3ut.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTryuqYjoPVcFVXBJ4jUTOcd15fvsaEL4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "302066388229-gc27b5neqru3g2qmst26e6qjf345p3ut.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

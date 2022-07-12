@@ -4,14 +4,6 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   extends: ['@react-native-community'],
   rules: {
-    semi: ['error', 'always'],
-    '@typescript-eslint/consistent-type-imports': [
-      'error',
-      {
-        prefer: 'type-imports',
-      },
-    ],
-    '@typescript-eslint/no-unused-vars': 'off',
     'comma-dangle': ['error', 'always-multiline'],
     'no-array-constructor': 'error',
     'no-cond-assign': 'error',
@@ -31,5 +23,12 @@ module.exports = {
     'no-useless-constructor': 'error',
     'no-useless-rename': 'error',
     'no-useless-return': 'error',
+    semi: ['error', 'always'],
+    '@typescript-eslint/consistent-type-imports': [
+      'error',
+      {
+        prefer: 'type-imports',
+      },
+    ],
   },
 };
