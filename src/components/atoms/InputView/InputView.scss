@@ -1,0 +1,27 @@
+/**
+ * Styles for Component.tsx
+ * @created 2020-12-15 14:57:40
+ * @author maivtt14 <vungoc2901@gmail.com>
+ */
+
+@import "src/styles/mixins";
+
+.container {
+  padding: 4px 20px;
+  margin-bottom: 16px;
+  border: 0.5px map-get($colors, "border");
+  border-radius: 5px;
+}
+
+.viewContainer {
+  width: 90%;
+}
+
+.textError {
+
+}
+
+.border {
+  border-width: 1px;
+}
+

@@ -12,7 +12,7 @@
 //
 // export * from './GlobalUserType';
 //
-// export * from './AppUser';
+// export * from './AppUserAtom';
 
 import nameof from 'ts-nameof.macro';
 import {ObjectField} from 'react3l-decorators';

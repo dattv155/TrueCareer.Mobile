@@ -20,6 +20,8 @@ export const PLATFORM_IS_ANDROID: boolean = Platform.OS === 'android';
 
 export const PLATFORM_IS_IOS: boolean = Platform.OS === 'ios';
 
+export const DEBOUNCE_TIME: number = 150;
+
 export const PLATFORM: string = PLATFORM_IS_ANDROID ? 'Android' : 'iOS';
 
 const {width: SCREEN_WIDTH, height: SCREEN_HEIGHT} = Dimensions.get('screen');
@@ -55,7 +57,8 @@ export const DEFAULT_DATE: Date = new Date(0);
  */
 
 // export const APP_SERVER_URL: string = process.env.APP_SERVER_URL!;
-export const APP_SERVER_URL: string = 'https://truecareer.thunghiem.club';
+// export const APP_SERVER_URL: string = 'https://truecareer.thunghiem.club';
+export const APP_SERVER_URL: string = 'http://localhost:5000';
 
 if (!APP_SERVER_URL) {
   throw new Error('Missing API_BASE_URL');

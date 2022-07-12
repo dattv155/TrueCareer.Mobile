@@ -13,7 +13,7 @@ export enum PortalEndpoints {
 export enum ConversationEndpoints {
   BASE_HREF = 'rpc/utils/conversation',
   MESSAGE_HREF = 'rpc/utils/conversation-message',
-  SIGNALR_HREF = 'rpc/utils/conversation-hub',
+  SIGNALR_HREF = '/rpc/truecareer/conversation-hub',
   GLOBAL_HREF = 'rpc/utils/global-user',
 }
 
@@ -25,4 +25,9 @@ export enum ConstructionEndpoints {
   PROFILE_HREF = '/rpc/construction/profile',
   TIME_KEEPING_HREF = '/rpc/construction/time-keeping',
   DOCUMENT_HREF = '/rpc/construction/document',
+}
+
+export enum AccountEndpoints {
+  ACCOUNT_HREF = '/rpc/truecareer/account',
+  PROFILE_HREF = '/rpc/truecareer/profile',
 }

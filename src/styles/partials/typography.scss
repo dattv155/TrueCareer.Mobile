@@ -6,6 +6,10 @@
   font-family: map-get($map: $font-families, $key: bold);
 }
 
+.text {
+  font-family: map-get($map: $font-families, $key: medium);
+}
+
 .h1 {
   @include typography(34px, 56px);
 }

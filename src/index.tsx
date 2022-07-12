@@ -26,6 +26,10 @@ import {signalService} from 'src/services/signalr-service';
 import SplashScreen from 'react-native-splash-screen';
 import {navigationRef} from 'src/config/navigation';
 import RootNavigator from './navigators/RootNavigator/RootNavigator';
+import LoginNavigator from './navigators/LoginNavigator';
+import {RecoilRoot, useRecoilValue} from 'recoil';
+import Spinner from 'react-native-spinkit';
+import {appUserAtom} from './store/atoms/appUserAtom';
 
 if (__DEV__) {
   addReactNDevTools();
@@ -77,11 +81,13 @@ const App = React.lazy(async () => {
 
   await i18next.changeLanguage(nameof(vi));
 
+  // await signalService.hubConnectionSignalr();
+
   return {
     default: function RootComponent() {
       // appLocation.useLocation();
 
-      // const userId = useSelector(userSelector);
+      const user = useRecoilValue(appUserAtom);
 
       React.useEffect(() => {
         if (Platform.OS !== 'android') {
@@ -101,11 +107,10 @@ const App = React.lazy(async () => {
       //   });
       // }, [userId]);
 
-      // if (userId) {
-      //   return <RootNavigator />;
-      // }
-      // return <LoginNavigator />;
-      return <RootNavigator />;
+      if (user) {
+        return <RootNavigator />;
+      }
+      return <LoginNavigator />;
     },
   };
 });
@@ -114,16 +119,18 @@ const AppEntry: FC = () => {
   useReduxDevToolsExtension(navigationRef);
 
   return (
-    <Provider store={store}>
-      <SafeAreaProvider>
-        <StatusBar barStyle="light-content" />
-        <NavigationContainer>
-          <Suspense fallback={null}>
-            <App />
-          </Suspense>
-        </NavigationContainer>
-      </SafeAreaProvider>
-    </Provider>
+    <RecoilRoot>
+      <Provider store={store}>
+        <SafeAreaProvider>
+          <StatusBar barStyle="light-content" />
+          <NavigationContainer>
+            <Suspense fallback={<Spinner />}>
+              <App />
+            </Suspense>
+          </NavigationContainer>
+        </SafeAreaProvider>
+      </Provider>
+    </RecoilRoot>
   );
 };
 

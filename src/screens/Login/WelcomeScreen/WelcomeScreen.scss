@@ -1,0 +1,38 @@
+/**
+ * WelcomeScreen
+ * 2022-07-03 16:02:01
+ */
+@import "src/styles/mixins";
+
+.backgroundImage {
+  position: absolute;
+  z-index: -1;
+}
+.container {
+  //margin-top: 90px;
+}
+
+.routeButton {
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+  border-radius: 5px;
+  width: 90%;
+  padding: 10px;
+}
+
+.rightView {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.leftView {
+  padding-right: 8px;
+  border-right-width: 0.5px;
+  border-color: map-get($colors, "gray");
+  width: 15%;
+  align-items: center;
+  justify-content: center;
+}

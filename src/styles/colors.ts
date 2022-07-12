@@ -1,9 +1,9 @@
 export enum Colors {
   Primary = '#0F62FE',
   Secondary = '#FAF9F8',
-  Gray = '#161616',
+  Gray = '#343434',
   White = '#FFFFFF',
-  Black = '#343434',
+  Black = '#161616',
   Grey10 = '#F3F2F1',
   GrayF3 = '#F3F3F3',
   Green = '#039856',
@@ -24,4 +24,7 @@ export enum Colors {
   TextInputPreSuffix = '#A8A8A8',
 
   Dash = '#EDEDED',
+  Blue = '#302D87',
+  Purple = '#6979F8',
+  DarkBlue = '#302D87',
 }

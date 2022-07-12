@@ -1,0 +1,15 @@
+/**
+ * ButtonComponent
+ * 2022-07-05 21:07:39
+ */
+@import "src/styles/mixins";
+
+.container {
+  background-color: map-get($colors, 'primary');
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 16px;
+  padding: 16px;
+  border-radius: 5px;
+}

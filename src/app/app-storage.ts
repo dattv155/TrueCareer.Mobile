@@ -59,12 +59,18 @@ export class AppStorage {
     await AsyncStorage.setItem(nameof(this.token), token);
   }
 
+  public async removeToken(): Promise<void> {
+    try {
+      await AsyncStorage.removeItem(nameof(AppStorage.prototype.token));
+    } catch (error) {}
+  }
+
   /**
-   * AppUser
+   * AppUserAtom
    *
    */
 
-  public getAppUser = async (): Promise<AppUser | undefined> => {
+  public getUser = async (): Promise<AppUser | undefined> => {
     const serializedUserLogin: string | null = await AsyncStorage.getItem(
       nameof(this.appUser),
     );
@@ -132,7 +138,7 @@ export class AppStorage {
     this.token = await AsyncStorage.getItem(nameof(this.token));
     // this.refreshToken = await AsyncStorage.getItem(nameof(this.refreshToken));
     this.serverUrl = await AsyncStorage.getItem(nameof(this.saveServerUrl));
-    this.appUser = await this.getAppUser();
+    this.appUser = await this.getUser();
     this.globalUser = await this.getGlobalUser();
   }
 }
