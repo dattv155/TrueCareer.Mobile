@@ -16,10 +16,11 @@ export async function hubConnectionSignalr(this: SignalService) {
         path: ConversationEndpoints.SIGNALR_HREF,
       }),
       {
-        accessTokenFactory: () => store.getState().authentication.token!,
+        accessTokenFactory: () =>
+          'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjUiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidHJvbmdkYXQxNTA1IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9wcmltYXJ5c2lkIjoiMDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDAwMDAwMDAwIiwibmJmIjoxNjU2ODE1NzU1LCJleHAiOjE3NTY4MTU3NTR9.Ndh5oyhZuOZR62ptv4N9XrnYQ9Zkw8TBmodSHYZB9uBkwfeAU1ffFczcHXz17eJp5pLyVnG37EvWImDrURhYYFzliNiseZQO0oDa5x-rV6AbcZfYbSbdpOJoBwrryNw-jVX0RH2EwF5_w7B2SL9kBZ3tKwIIDsLuoWv8I_poTeLryEMsCNv98qXPb73jtBgjc_jYZSb5yLlUBab_9d_knGTqACwRERov_WjQnWVp_huv3SJwjGSU5Ln5u3Kf80YYnMD2DddK7qxpTjpK7cNNFpploQ-YU2oGaHrviIfj_6AAYdVAjGmQLzyT5qZ2ukzlodutlIWc_nKClMfQsZpgbA',
       },
     )
-    .configureLogging(signalR.LogLevel.Warning)
+    .configureLogging(signalR.LogLevel.Debug)
     .withAutomaticReconnect()
     .build();
 
