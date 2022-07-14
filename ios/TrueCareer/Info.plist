@@ -35,6 +35,12 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+      <string>App need access this permission when use camera</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+      <string>App need access this permission when use photo library</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+      <string>App need access this permission when use photo library</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>UILaunchStoryboardName</key>
