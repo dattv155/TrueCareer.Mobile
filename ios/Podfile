@@ -20,6 +20,8 @@ target 'TrueCareer' do
   pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary"
   pod 'Permission-PhotoLibraryAddOnly', :path => "#{permissions_path}/PhotoLibraryAddOnly"
 
+  pod 'react-native-blob-util', :path => '../node_modules/react-native-blob-util'
+
   target 'TrueCareerTests' do
     inherit! :complete
     # Pods for testing
