@@ -53,7 +53,7 @@
     "react-native-linear-gradient": "^2.5.6",
     "react-native-modal": "^13.0.0",
     "react-native-permissions": "^3.4.0",
-    "react-native-reanimated": "^2.7.0",
+    "react-native-reanimated": "2.4.1",
     "react-native-reanimated-carousel": "^2.3.4",
     "react-native-redux-theming": "^0.1.6",
     "react-native-safe-area-context": "^3.4.0",
