@@ -14,7 +14,6 @@
 		2A7618519C3F407C8B17F95C /* IBMPlexSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 658F529E24E14D9E97FD4F22 /* IBMPlexSans-Medium.ttf */; };
 		4250B7488D8F42CC8289868D /* IBMPlexSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03A199747128471FADED2B52 /* IBMPlexSans-Bold.ttf */; };
 		7C920281FDE549CB8CE8017D /* IBMPlexSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A99937E12F5440B95C3A3F3 /* IBMPlexSans-Thin.ttf */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9B672F75903D4C76AC1A2DC6 /* IBMPlexSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2447F67E17864B23B159DECB /* IBMPlexSans-SemiBold.ttf */; };
 		AC1D93FF477D4FBDB928195B /* IBMPlexSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47E1A23D147462DAF527E86 /* IBMPlexSans-ExtraLight.ttf */; };
 		B0B254CBCE0E467FACA98715 /* SVN-GilroyLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 227F32E1B2754F3D92F6DD44 /* SVN-GilroyLight.otf */; };
@@ -53,6 +52,9 @@
 		DD0AE8C4288C49B000EF6BE1 /* Icon-App-40x40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE8A5288C49B000EF6BE1 /* Icon-App-40x40@3x.png */; };
 		DD0AE8C5288C49B000EF6BE1 /* Icon-App-29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE8A6288C49B000EF6BE1 /* Icon-App-29x29@2x.png */; };
 		DD0AE8C6288C49B000EF6BE1 /* Icon-App-29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE8A6288C49B000EF6BE1 /* Icon-App-29x29@2x.png */; };
+		DD0AE8C8288C60CD00EF6BE1 /* launch_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE8C7288C60CD00EF6BE1 /* launch_screen.png */; };
+		DD0AE8CA288C62FB00EF6BE1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE8C9288C62FB00EF6BE1 /* Launch Screen.storyboard */; };
+		DD0AE8CB288C62FB00EF6BE1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE8C9288C62FB00EF6BE1 /* Launch Screen.storyboard */; };
 		E9B19D9192DA9937FB858177 /* libPods-TrueCareer-TrueCareerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C03743F49F33F2E62D75140C /* libPods-TrueCareer-TrueCareerTests.a */; };
 		F143DC6D120E4A95A5B6C8EF /* IBMPlexSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C833C0D5BBC40E1B274FCE1 /* IBMPlexSans-Italic.ttf */; };
 		FFE5B831E5F7452FAD5534BC /* IBMPlexSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEBB1CE441D64570B282A3CF /* IBMPlexSans-Regular.ttf */; };
@@ -88,7 +90,6 @@
 		518AD3C1109842579DF5196E /* SVN-GilroyBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SVN-GilroyBold.otf"; path = "../assets/fonts/SVN-GilroyBold.otf"; sourceTree = "<group>"; };
 		556FA229A3814FC690E948EB /* IBMPlexSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSans-Light.ttf"; path = "../assets/fonts/IBMPlexSans-Light.ttf"; sourceTree = "<group>"; };
 		658F529E24E14D9E97FD4F22 /* IBMPlexSans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSans-Medium.ttf"; path = "../assets/fonts/IBMPlexSans-Medium.ttf"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TrueCareer/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		822B8B34025A58B2AD3CDE94 /* Pods-TrueCareer-TrueCareerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrueCareer-TrueCareerTests.debug.xcconfig"; path = "Target Support Files/Pods-TrueCareer-TrueCareerTests/Pods-TrueCareer-TrueCareerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8B469DEC9F31385FFB0FA89A /* Pods-TrueCareer-TrueCareerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrueCareer-TrueCareerTests.release.xcconfig"; path = "Target Support Files/Pods-TrueCareer-TrueCareerTests/Pods-TrueCareer-TrueCareerTests.release.xcconfig"; sourceTree = "<group>"; };
 		9C833C0D5BBC40E1B274FCE1 /* IBMPlexSans-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSans-Italic.ttf"; path = "../assets/fonts/IBMPlexSans-Italic.ttf"; sourceTree = "<group>"; };
@@ -110,6 +111,8 @@
 		DD0AE8A4288C49B000EF6BE1 /* Icon-App-76x76@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@1x.png"; sourceTree = "<group>"; };
 		DD0AE8A5288C49B000EF6BE1 /* Icon-App-40x40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@3x.png"; sourceTree = "<group>"; };
 		DD0AE8A6288C49B000EF6BE1 /* Icon-App-29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@2x.png"; sourceTree = "<group>"; };
+		DD0AE8C7288C60CD00EF6BE1 /* launch_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch_screen.png; sourceTree = "<group>"; };
+		DD0AE8C9288C62FB00EF6BE1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FEBB1CE441D64570B282A3CF /* IBMPlexSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSans-Regular.ttf"; path = "../assets/fonts/IBMPlexSans-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,7 +179,6 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = TrueCareer;
@@ -213,6 +215,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				DD0AE8C9288C62FB00EF6BE1 /* Launch Screen.storyboard */,
 				13B07FAE1A68108700A75B9A /* TrueCareer */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* TrueCareerTests */,
@@ -238,6 +241,7 @@
 		DD0AE896288C49B000EF6BE1 /* AppIcon.appiconset */ = {
 			isa = PBXGroup;
 			children = (
+				DD0AE8C7288C60CD00EF6BE1 /* launch_screen.png */,
 				DD0AE897288C49B000EF6BE1 /* Icon-App-76x76@2x.png */,
 				DD0AE898288C49B000EF6BE1 /* Icon-App-29x29@1x.png */,
 				DD0AE899288C49B000EF6BE1 /* Icon-App-40x40@1x.png */,
@@ -347,6 +351,7 @@
 			files = (
 				DD0AE8C4288C49B000EF6BE1 /* Icon-App-40x40@3x.png in Resources */,
 				DD0AE8AC288C49B000EF6BE1 /* Icon-App-40x40@1x.png in Resources */,
+				DD0AE8CB288C62FB00EF6BE1 /* Launch Screen.storyboard in Resources */,
 				DD0AE8AE288C49B000EF6BE1 /* Icon-App-20x20@1x.png in Resources */,
 				DD0AE8C0288C49B000EF6BE1 /* Icon-App-60x60@2x.png in Resources */,
 				DD0AE8C6288C49B000EF6BE1 /* Icon-App-29x29@2x.png in Resources */,
@@ -370,7 +375,6 @@
 			files = (
 				DD0AE8AB288C49B000EF6BE1 /* Icon-App-40x40@1x.png in Resources */,
 				DD0AE8AD288C49B000EF6BE1 /* Icon-App-20x20@1x.png in Resources */,
-				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				DD0AE8BD288C49B000EF6BE1 /* Icon-App-60x60@3x.png in Resources */,
 				DD0AE8BB288C49B000EF6BE1 /* Icon-App-40x40@2x.png in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
@@ -386,6 +390,7 @@
 				F143DC6D120E4A95A5B6C8EF /* IBMPlexSans-Italic.ttf in Resources */,
 				C75E8B2A02654728A2CFA3B6 /* IBMPlexSans-Light.ttf in Resources */,
 				2A7618519C3F407C8B17F95C /* IBMPlexSans-Medium.ttf in Resources */,
+				DD0AE8CA288C62FB00EF6BE1 /* Launch Screen.storyboard in Resources */,
 				DD0AE8A9288C49B000EF6BE1 /* Icon-App-29x29@1x.png in Resources */,
 				FFE5B831E5F7452FAD5534BC /* IBMPlexSans-Regular.ttf in Resources */,
 				9B672F75903D4C76AC1A2DC6 /* IBMPlexSans-SemiBold.ttf in Resources */,
@@ -395,6 +400,7 @@
 				C2D8ED7B055748FFB3DEB90F /* SVN-GilroyBold.otf in Resources */,
 				DD0AE8AF288C49B000EF6BE1 /* Icon-App-83.5x83.5@2x.png in Resources */,
 				DD0AE8A7288C49B000EF6BE1 /* Icon-App-76x76@2x.png in Resources */,
+				DD0AE8C8288C60CD00EF6BE1 /* launch_screen.png in Resources */,
 				B0B254CBCE0E467FACA98715 /* SVN-GilroyLight.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

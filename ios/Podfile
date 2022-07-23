@@ -22,6 +22,8 @@ target 'TrueCareer' do
 
   pod 'react-native-blob-util', :path => '../node_modules/react-native-blob-util'
 
+  pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
+
   target 'TrueCareerTests' do
     inherit! :complete
     # Pods for testing

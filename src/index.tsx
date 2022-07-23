@@ -6,7 +6,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {name as appName} from 'app.json';
 import type {FC} from 'react';
 import React, {Suspense} from 'react';
-import {AppRegistry, AppState, Platform, StatusBar} from 'react-native';
+import {AppRegistry, AppState, StatusBar} from 'react-native';
 import 'react-native-gesture-handler';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {Provider} from 'react-redux';
@@ -19,10 +19,9 @@ import {initReactI18next} from 'react-i18next';
 import {useReduxDevToolsExtension} from '@react-navigation/devtools';
 import {appStorage} from 'src/app';
 import {appSettingsSlice} from 'src/store/app-settings';
-import {APP_SERVER_URL} from 'src/config/consts';
+import {APP_SERVER_URL, PLATFORM_IS_IOS} from 'src/config/consts';
 import {authenticationSlice} from 'src/store/authentication';
 import {signalService} from 'src/services/signalr-service';
-import SplashScreen from 'react-native-splash-screen';
 import {navigationRef} from 'src/config/navigation';
 import RootNavigator from './navigators/RootNavigator/RootNavigator';
 import LoginNavigator from './navigators/LoginNavigator';
@@ -117,9 +116,8 @@ const App = React.lazy(async () => {
       const user = useRecoilValue(appUserAtom);
 
       React.useEffect(() => {
-        if (Platform.OS !== 'android') {
-          SplashScreen.hide();
-        }
+        PLATFORM_IS_IOS && require('react-native-splash-screen').default.hide();
+
         return function cleanup() {
           subscription.remove();
         };
