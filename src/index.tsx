@@ -16,9 +16,8 @@ import vi from 'src/i18n/vi.json';
 import i18next from 'i18next';
 import nameof from 'ts-nameof.macro';
 import {initReactI18next} from 'react-i18next';
-import addReactNDevTools from 'reactn-devtools';
 import {useReduxDevToolsExtension} from '@react-navigation/devtools';
-import {appStorage, globalState} from 'src/app';
+import {appStorage} from 'src/app';
 import {appSettingsSlice} from 'src/store/app-settings';
 import {APP_SERVER_URL} from 'src/config/consts';
 import {authenticationSlice} from 'src/store/authentication';
@@ -38,8 +37,6 @@ import {conversationMessageRepository} from './repositories/conversation-message
 import TruesightChat from 'react-native-truesight-chat';
 
 if (__DEV__) {
-  addReactNDevTools();
-
   /**
    * Keep device screen awake on development
    */
@@ -49,22 +46,30 @@ if (__DEV__) {
 TruesightChat.config({
   serverUrl: server.serverUrl,
   atomicStyles: atomicStyles,
+  //@ts-ignore
   listConversation: conversationRepository.list,
+  //@ts-ignore
   countConversation: conversationRepository.count,
+  //@ts-ignore
   listConversationMessage: conversationMessageRepository.list,
+  //@ts-ignore
   countConversationMessage: conversationMessageRepository.count,
+  //@ts-ignore
   listConversationAttachment:
     conversationMessageRepository.listConversationAttachment,
+  //@ts-ignore
   countConversationAttachment:
     conversationMessageRepository.countConversationAttachment,
+  //@ts-ignore
   multiUploadFile: conversationRepository.multiUploadFile,
+  //@ts-ignore
   create: conversationMessageRepository.create,
+  //@ts-ignore
   singleListGlobalUser: conversationRepository.singleListGlobalUser,
 });
 
 const App = React.lazy(async () => {
   await appStorage.initialize();
-  await globalState.initialize();
 
   store.dispatch(
     appSettingsSlice.actions.loadAppSettings({
