@@ -21,6 +21,38 @@
 		C059E01F6FF56574C0999DC0 /* libPods-TrueCareer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41970D31647B69B5245020F8 /* libPods-TrueCareer.a */; };
 		C2D8ED7B055748FFB3DEB90F /* SVN-GilroyBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 518AD3C1109842579DF5196E /* SVN-GilroyBold.otf */; };
 		C75E8B2A02654728A2CFA3B6 /* IBMPlexSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 556FA229A3814FC690E948EB /* IBMPlexSans-Light.ttf */; };
+		DD0AE8A7288C49B000EF6BE1 /* Icon-App-76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE897288C49B000EF6BE1 /* Icon-App-76x76@2x.png */; };
+		DD0AE8A8288C49B000EF6BE1 /* Icon-App-76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE897288C49B000EF6BE1 /* Icon-App-76x76@2x.png */; };
+		DD0AE8A9288C49B000EF6BE1 /* Icon-App-29x29@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE898288C49B000EF6BE1 /* Icon-App-29x29@1x.png */; };
+		DD0AE8AA288C49B000EF6BE1 /* Icon-App-29x29@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE898288C49B000EF6BE1 /* Icon-App-29x29@1x.png */; };
+		DD0AE8AB288C49B000EF6BE1 /* Icon-App-40x40@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE899288C49B000EF6BE1 /* Icon-App-40x40@1x.png */; };
+		DD0AE8AC288C49B000EF6BE1 /* Icon-App-40x40@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE899288C49B000EF6BE1 /* Icon-App-40x40@1x.png */; };
+		DD0AE8AD288C49B000EF6BE1 /* Icon-App-20x20@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE89A288C49B000EF6BE1 /* Icon-App-20x20@1x.png */; };
+		DD0AE8AE288C49B000EF6BE1 /* Icon-App-20x20@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE89A288C49B000EF6BE1 /* Icon-App-20x20@1x.png */; };
+		DD0AE8AF288C49B000EF6BE1 /* Icon-App-83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE89B288C49B000EF6BE1 /* Icon-App-83.5x83.5@2x.png */; };
+		DD0AE8B0288C49B000EF6BE1 /* Icon-App-83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE89B288C49B000EF6BE1 /* Icon-App-83.5x83.5@2x.png */; };
+		DD0AE8B1288C49B000EF6BE1 /* Icon-App-20x20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE89C288C49B000EF6BE1 /* Icon-App-20x20@3x.png */; };
+		DD0AE8B2288C49B000EF6BE1 /* Icon-App-20x20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE89C288C49B000EF6BE1 /* Icon-App-20x20@3x.png */; };
+		DD0AE8B3288C49B000EF6BE1 /* ItunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE89D288C49B000EF6BE1 /* ItunesArtwork@2x.png */; };
+		DD0AE8B4288C49B000EF6BE1 /* ItunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE89D288C49B000EF6BE1 /* ItunesArtwork@2x.png */; };
+		DD0AE8B5288C49B000EF6BE1 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE89E288C49B000EF6BE1 /* Contents.json */; };
+		DD0AE8B6288C49B000EF6BE1 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE89E288C49B000EF6BE1 /* Contents.json */; };
+		DD0AE8B7288C49B000EF6BE1 /* Icon-App-20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE89F288C49B000EF6BE1 /* Icon-App-20x20@2x.png */; };
+		DD0AE8B8288C49B000EF6BE1 /* Icon-App-20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE89F288C49B000EF6BE1 /* Icon-App-20x20@2x.png */; };
+		DD0AE8B9288C49B000EF6BE1 /* Icon-App-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE8A0288C49B000EF6BE1 /* Icon-App-29x29@3x.png */; };
+		DD0AE8BA288C49B000EF6BE1 /* Icon-App-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE8A0288C49B000EF6BE1 /* Icon-App-29x29@3x.png */; };
+		DD0AE8BB288C49B000EF6BE1 /* Icon-App-40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE8A1288C49B000EF6BE1 /* Icon-App-40x40@2x.png */; };
+		DD0AE8BC288C49B000EF6BE1 /* Icon-App-40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE8A1288C49B000EF6BE1 /* Icon-App-40x40@2x.png */; };
+		DD0AE8BD288C49B000EF6BE1 /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE8A2288C49B000EF6BE1 /* Icon-App-60x60@3x.png */; };
+		DD0AE8BE288C49B000EF6BE1 /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE8A2288C49B000EF6BE1 /* Icon-App-60x60@3x.png */; };
+		DD0AE8BF288C49B000EF6BE1 /* Icon-App-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE8A3288C49B000EF6BE1 /* Icon-App-60x60@2x.png */; };
+		DD0AE8C0288C49B000EF6BE1 /* Icon-App-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE8A3288C49B000EF6BE1 /* Icon-App-60x60@2x.png */; };
+		DD0AE8C1288C49B000EF6BE1 /* Icon-App-76x76@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE8A4288C49B000EF6BE1 /* Icon-App-76x76@1x.png */; };
+		DD0AE8C2288C49B000EF6BE1 /* Icon-App-76x76@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE8A4288C49B000EF6BE1 /* Icon-App-76x76@1x.png */; };
+		DD0AE8C3288C49B000EF6BE1 /* Icon-App-40x40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE8A5288C49B000EF6BE1 /* Icon-App-40x40@3x.png */; };
+		DD0AE8C4288C49B000EF6BE1 /* Icon-App-40x40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE8A5288C49B000EF6BE1 /* Icon-App-40x40@3x.png */; };
+		DD0AE8C5288C49B000EF6BE1 /* Icon-App-29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE8A6288C49B000EF6BE1 /* Icon-App-29x29@2x.png */; };
+		DD0AE8C6288C49B000EF6BE1 /* Icon-App-29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE8A6288C49B000EF6BE1 /* Icon-App-29x29@2x.png */; };
 		E9B19D9192DA9937FB858177 /* libPods-TrueCareer-TrueCareerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C03743F49F33F2E62D75140C /* libPods-TrueCareer-TrueCareerTests.a */; };
 		F143DC6D120E4A95A5B6C8EF /* IBMPlexSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C833C0D5BBC40E1B274FCE1 /* IBMPlexSans-Italic.ttf */; };
 		FFE5B831E5F7452FAD5534BC /* IBMPlexSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEBB1CE441D64570B282A3CF /* IBMPlexSans-Regular.ttf */; };
@@ -40,7 +72,7 @@
 		00E356EE1AD99517003FC87E /* TrueCareerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrueCareerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* TrueCareerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrueCareerTests.m; sourceTree = "<group>"; };
-		03A199747128471FADED2B52 /* IBMPlexSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSans-Bold.ttf"; path = "../assets/fonts/IBMPlexSans-Bold.ttf"; sourceTree = "<group>"; };
+		03A199747128471FADED2B52 /* IBMPlexSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSans-Bold.ttf"; path = "../assets/fonts/IBMPlexSans-Bold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* TrueCareer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrueCareer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TrueCareer/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = TrueCareer/AppDelegate.m; sourceTree = "<group>"; };
@@ -48,22 +80,38 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TrueCareer/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TrueCareer/main.m; sourceTree = "<group>"; };
 		2059199E6B065F86B419D3B8 /* Pods-TrueCareer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrueCareer.release.xcconfig"; path = "Target Support Files/Pods-TrueCareer/Pods-TrueCareer.release.xcconfig"; sourceTree = "<group>"; };
-		227F32E1B2754F3D92F6DD44 /* SVN-GilroyLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SVN-GilroyLight.otf"; path = "../assets/fonts/SVN-GilroyLight.otf"; sourceTree = "<group>"; };
-		2447F67E17864B23B159DECB /* IBMPlexSans-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSans-SemiBold.ttf"; path = "../assets/fonts/IBMPlexSans-SemiBold.ttf"; sourceTree = "<group>"; };
-		2A99937E12F5440B95C3A3F3 /* IBMPlexSans-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSans-Thin.ttf"; path = "../assets/fonts/IBMPlexSans-Thin.ttf"; sourceTree = "<group>"; };
+		227F32E1B2754F3D92F6DD44 /* SVN-GilroyLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SVN-GilroyLight.otf"; path = "../assets/fonts/SVN-GilroyLight.otf"; sourceTree = "<group>"; };
+		2447F67E17864B23B159DECB /* IBMPlexSans-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSans-SemiBold.ttf"; path = "../assets/fonts/IBMPlexSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		2A99937E12F5440B95C3A3F3 /* IBMPlexSans-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSans-Thin.ttf"; path = "../assets/fonts/IBMPlexSans-Thin.ttf"; sourceTree = "<group>"; };
 		41970D31647B69B5245020F8 /* libPods-TrueCareer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TrueCareer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC68CCDA1961111A0557F29 /* Pods-TrueCareer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrueCareer.debug.xcconfig"; path = "Target Support Files/Pods-TrueCareer/Pods-TrueCareer.debug.xcconfig"; sourceTree = "<group>"; };
-		518AD3C1109842579DF5196E /* SVN-GilroyBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SVN-GilroyBold.otf"; path = "../assets/fonts/SVN-GilroyBold.otf"; sourceTree = "<group>"; };
-		556FA229A3814FC690E948EB /* IBMPlexSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSans-Light.ttf"; path = "../assets/fonts/IBMPlexSans-Light.ttf"; sourceTree = "<group>"; };
-		658F529E24E14D9E97FD4F22 /* IBMPlexSans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSans-Medium.ttf"; path = "../assets/fonts/IBMPlexSans-Medium.ttf"; sourceTree = "<group>"; };
+		518AD3C1109842579DF5196E /* SVN-GilroyBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SVN-GilroyBold.otf"; path = "../assets/fonts/SVN-GilroyBold.otf"; sourceTree = "<group>"; };
+		556FA229A3814FC690E948EB /* IBMPlexSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSans-Light.ttf"; path = "../assets/fonts/IBMPlexSans-Light.ttf"; sourceTree = "<group>"; };
+		658F529E24E14D9E97FD4F22 /* IBMPlexSans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSans-Medium.ttf"; path = "../assets/fonts/IBMPlexSans-Medium.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TrueCareer/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		822B8B34025A58B2AD3CDE94 /* Pods-TrueCareer-TrueCareerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrueCareer-TrueCareerTests.debug.xcconfig"; path = "Target Support Files/Pods-TrueCareer-TrueCareerTests/Pods-TrueCareer-TrueCareerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8B469DEC9F31385FFB0FA89A /* Pods-TrueCareer-TrueCareerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrueCareer-TrueCareerTests.release.xcconfig"; path = "Target Support Files/Pods-TrueCareer-TrueCareerTests/Pods-TrueCareer-TrueCareerTests.release.xcconfig"; sourceTree = "<group>"; };
-		9C833C0D5BBC40E1B274FCE1 /* IBMPlexSans-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSans-Italic.ttf"; path = "../assets/fonts/IBMPlexSans-Italic.ttf"; sourceTree = "<group>"; };
+		9C833C0D5BBC40E1B274FCE1 /* IBMPlexSans-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSans-Italic.ttf"; path = "../assets/fonts/IBMPlexSans-Italic.ttf"; sourceTree = "<group>"; };
 		C03743F49F33F2E62D75140C /* libPods-TrueCareer-TrueCareerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TrueCareer-TrueCareerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D47E1A23D147462DAF527E86 /* IBMPlexSans-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSans-ExtraLight.ttf"; path = "../assets/fonts/IBMPlexSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		D47E1A23D147462DAF527E86 /* IBMPlexSans-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSans-ExtraLight.ttf"; path = "../assets/fonts/IBMPlexSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		DD0AE897288C49B000EF6BE1 /* Icon-App-76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@2x.png"; sourceTree = "<group>"; };
+		DD0AE898288C49B000EF6BE1 /* Icon-App-29x29@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@1x.png"; sourceTree = "<group>"; };
+		DD0AE899288C49B000EF6BE1 /* Icon-App-40x40@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@1x.png"; sourceTree = "<group>"; };
+		DD0AE89A288C49B000EF6BE1 /* Icon-App-20x20@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@1x.png"; sourceTree = "<group>"; };
+		DD0AE89B288C49B000EF6BE1 /* Icon-App-83.5x83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-83.5x83.5@2x.png"; sourceTree = "<group>"; };
+		DD0AE89C288C49B000EF6BE1 /* Icon-App-20x20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@3x.png"; sourceTree = "<group>"; };
+		DD0AE89D288C49B000EF6BE1 /* ItunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ItunesArtwork@2x.png"; sourceTree = "<group>"; };
+		DD0AE89E288C49B000EF6BE1 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		DD0AE89F288C49B000EF6BE1 /* Icon-App-20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@2x.png"; sourceTree = "<group>"; };
+		DD0AE8A0288C49B000EF6BE1 /* Icon-App-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@3x.png"; sourceTree = "<group>"; };
+		DD0AE8A1288C49B000EF6BE1 /* Icon-App-40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@2x.png"; sourceTree = "<group>"; };
+		DD0AE8A2288C49B000EF6BE1 /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
+		DD0AE8A3288C49B000EF6BE1 /* Icon-App-60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@2x.png"; sourceTree = "<group>"; };
+		DD0AE8A4288C49B000EF6BE1 /* Icon-App-76x76@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@1x.png"; sourceTree = "<group>"; };
+		DD0AE8A5288C49B000EF6BE1 /* Icon-App-40x40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@3x.png"; sourceTree = "<group>"; };
+		DD0AE8A6288C49B000EF6BE1 /* Icon-App-29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@2x.png"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		FEBB1CE441D64570B282A3CF /* IBMPlexSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSans-Regular.ttf"; path = "../assets/fonts/IBMPlexSans-Regular.ttf"; sourceTree = "<group>"; };
+		FEBB1CE441D64570B282A3CF /* IBMPlexSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSans-Regular.ttf"; path = "../assets/fonts/IBMPlexSans-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +149,6 @@
 				227F32E1B2754F3D92F6DD44 /* SVN-GilroyLight.otf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		00E356EF1AD99517003FC87E /* TrueCareerTests */ = {
@@ -124,6 +171,7 @@
 		13B07FAE1A68108700A75B9A /* TrueCareer */ = {
 			isa = PBXGroup;
 			children = (
+				DD0AE896288C49B000EF6BE1 /* AppIcon.appiconset */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -185,6 +233,29 @@
 				00E356EE1AD99517003FC87E /* TrueCareerTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DD0AE896288C49B000EF6BE1 /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+				DD0AE897288C49B000EF6BE1 /* Icon-App-76x76@2x.png */,
+				DD0AE898288C49B000EF6BE1 /* Icon-App-29x29@1x.png */,
+				DD0AE899288C49B000EF6BE1 /* Icon-App-40x40@1x.png */,
+				DD0AE89A288C49B000EF6BE1 /* Icon-App-20x20@1x.png */,
+				DD0AE89B288C49B000EF6BE1 /* Icon-App-83.5x83.5@2x.png */,
+				DD0AE89C288C49B000EF6BE1 /* Icon-App-20x20@3x.png */,
+				DD0AE89D288C49B000EF6BE1 /* ItunesArtwork@2x.png */,
+				DD0AE89E288C49B000EF6BE1 /* Contents.json */,
+				DD0AE89F288C49B000EF6BE1 /* Icon-App-20x20@2x.png */,
+				DD0AE8A0288C49B000EF6BE1 /* Icon-App-29x29@3x.png */,
+				DD0AE8A1288C49B000EF6BE1 /* Icon-App-40x40@2x.png */,
+				DD0AE8A2288C49B000EF6BE1 /* Icon-App-60x60@3x.png */,
+				DD0AE8A3288C49B000EF6BE1 /* Icon-App-60x60@2x.png */,
+				DD0AE8A4288C49B000EF6BE1 /* Icon-App-76x76@1x.png */,
+				DD0AE8A5288C49B000EF6BE1 /* Icon-App-40x40@3x.png */,
+				DD0AE8A6288C49B000EF6BE1 /* Icon-App-29x29@2x.png */,
+			);
+			path = AppIcon.appiconset;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +345,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD0AE8C4288C49B000EF6BE1 /* Icon-App-40x40@3x.png in Resources */,
+				DD0AE8AC288C49B000EF6BE1 /* Icon-App-40x40@1x.png in Resources */,
+				DD0AE8AE288C49B000EF6BE1 /* Icon-App-20x20@1x.png in Resources */,
+				DD0AE8C0288C49B000EF6BE1 /* Icon-App-60x60@2x.png in Resources */,
+				DD0AE8C6288C49B000EF6BE1 /* Icon-App-29x29@2x.png in Resources */,
+				DD0AE8A8288C49B000EF6BE1 /* Icon-App-76x76@2x.png in Resources */,
+				DD0AE8BE288C49B000EF6BE1 /* Icon-App-60x60@3x.png in Resources */,
+				DD0AE8B6288C49B000EF6BE1 /* Contents.json in Resources */,
+				DD0AE8BC288C49B000EF6BE1 /* Icon-App-40x40@2x.png in Resources */,
+				DD0AE8AA288C49B000EF6BE1 /* Icon-App-29x29@1x.png in Resources */,
+				DD0AE8BA288C49B000EF6BE1 /* Icon-App-29x29@3x.png in Resources */,
+				DD0AE8C2288C49B000EF6BE1 /* Icon-App-76x76@1x.png in Resources */,
+				DD0AE8B8288C49B000EF6BE1 /* Icon-App-20x20@2x.png in Resources */,
+				DD0AE8B0288C49B000EF6BE1 /* Icon-App-83.5x83.5@2x.png in Resources */,
+				DD0AE8B4288C49B000EF6BE1 /* ItunesArtwork@2x.png in Resources */,
+				DD0AE8B2288C49B000EF6BE1 /* Icon-App-20x20@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,17 +368,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD0AE8AB288C49B000EF6BE1 /* Icon-App-40x40@1x.png in Resources */,
+				DD0AE8AD288C49B000EF6BE1 /* Icon-App-20x20@1x.png in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				DD0AE8BD288C49B000EF6BE1 /* Icon-App-60x60@3x.png in Resources */,
+				DD0AE8BB288C49B000EF6BE1 /* Icon-App-40x40@2x.png in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				DD0AE8C3288C49B000EF6BE1 /* Icon-App-40x40@3x.png in Resources */,
+				DD0AE8BF288C49B000EF6BE1 /* Icon-App-60x60@2x.png in Resources */,
+				DD0AE8C5288C49B000EF6BE1 /* Icon-App-29x29@2x.png in Resources */,
+				DD0AE8C1288C49B000EF6BE1 /* Icon-App-76x76@1x.png in Resources */,
 				4250B7488D8F42CC8289868D /* IBMPlexSans-Bold.ttf in Resources */,
+				DD0AE8B3288C49B000EF6BE1 /* ItunesArtwork@2x.png in Resources */,
+				DD0AE8B1288C49B000EF6BE1 /* Icon-App-20x20@3x.png in Resources */,
 				AC1D93FF477D4FBDB928195B /* IBMPlexSans-ExtraLight.ttf in Resources */,
+				DD0AE8B7288C49B000EF6BE1 /* Icon-App-20x20@2x.png in Resources */,
 				F143DC6D120E4A95A5B6C8EF /* IBMPlexSans-Italic.ttf in Resources */,
 				C75E8B2A02654728A2CFA3B6 /* IBMPlexSans-Light.ttf in Resources */,
 				2A7618519C3F407C8B17F95C /* IBMPlexSans-Medium.ttf in Resources */,
+				DD0AE8A9288C49B000EF6BE1 /* Icon-App-29x29@1x.png in Resources */,
 				FFE5B831E5F7452FAD5534BC /* IBMPlexSans-Regular.ttf in Resources */,
 				9B672F75903D4C76AC1A2DC6 /* IBMPlexSans-SemiBold.ttf in Resources */,
+				DD0AE8B9288C49B000EF6BE1 /* Icon-App-29x29@3x.png in Resources */,
 				7C920281FDE549CB8CE8017D /* IBMPlexSans-Thin.ttf in Resources */,
+				DD0AE8B5288C49B000EF6BE1 /* Contents.json in Resources */,
 				C2D8ED7B055748FFB3DEB90F /* SVN-GilroyBold.otf in Resources */,
+				DD0AE8AF288C49B000EF6BE1 /* Icon-App-83.5x83.5@2x.png in Resources */,
+				DD0AE8A7288C49B000EF6BE1 /* Icon-App-76x76@2x.png in Resources */,
 				B0B254CBCE0E467FACA98715 /* SVN-GilroyLight.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,6 +634,7 @@
 			baseConfigurationReference = 4DC68CCDA1961111A0557F29 /* Pods-TrueCareer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
@@ -557,6 +661,7 @@
 			baseConfigurationReference = 2059199E6B065F86B419D3B8 /* Pods-TrueCareer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = TrueCareer/Info.plist;
