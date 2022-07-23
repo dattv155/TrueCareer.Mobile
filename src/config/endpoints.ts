@@ -11,10 +11,10 @@ export enum PortalEndpoints {
 }
 
 export enum ConversationEndpoints {
-  BASE_HREF = 'rpc/utils/conversation',
-  MESSAGE_HREF = 'rpc/utils/conversation-message',
+  BASE_HREF = 'rpc/truecareer/conversation',
+  MESSAGE_HREF = 'rpc/truecareer/conversation-message',
   SIGNALR_HREF = '/rpc/truecareer/conversation-hub',
-  GLOBAL_HREF = 'rpc/utils/global-user',
+  GLOBAL_HREF = 'rpc/truecareer/global-user',
 }
 
 export enum NotificationEndpoints {

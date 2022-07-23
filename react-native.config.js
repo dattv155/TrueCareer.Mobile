@@ -14,5 +14,11 @@ module.exports = {
         android: null,
       },
     },
+    'react-native-truesight-chat': {
+      platforms: {
+        android: null,
+        ios: null,
+      },
+    },
   },
 };

@@ -57,8 +57,8 @@ export const DEFAULT_DATE: Date = new Date(0);
  */
 
 // export const APP_SERVER_URL: string = process.env.APP_SERVER_URL!;
-// export const APP_SERVER_URL: string = 'https://truecareer.thunghiem.club';
-export const APP_SERVER_URL: string = 'http://localhost:5000';
+export const APP_SERVER_URL: string = 'https://truecareer.truesight.asia';
+// export const APP_SERVER_URL: string = 'http://localhost:5000';
 
 if (!APP_SERVER_URL) {
   throw new Error('Missing API_BASE_URL');
@@ -71,3 +71,8 @@ export const HEIGHT_HEADER: number = 88;
 
 //10MB
 export const MAX_FILE_SIZE: number = 10485760;
+
+export const PLATFORM_OS_NAME = Platform.select({
+  android: 'Android',
+  ios: 'iOS',
+})!;

@@ -12,13 +12,18 @@ import type {StackScreenProps} from '@react-navigation/stack';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {ColorStyles} from 'src/styles/themes';
 import {useStyle} from 'react-native-redux-theming';
+import {ConversationListScreen} from 'src/screens/Root';
 
 export function HomeScreen(
   props: PropsWithChildren<HomeScreenProps>,
 ): ReactElement {
-  const {} = props;
+  const {navigation} = props;
   const [translate] = useTranslation();
   const colorStyles = useStyle(ColorStyles);
+
+  const handleGotoChatScreen = React.useCallback(() => {
+    navigation.navigate(ConversationListScreen.displayName);
+  }, [navigation]);
 
   return (
     <>
@@ -63,7 +68,7 @@ export function HomeScreen(
                   component={require('assets/icons/26/noti-border.svg')}
                 />
               </TouchableOpacity>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={handleGotoChatScreen}>
                 <SvgIcon
                   component={require('assets/icons/26/chat-border.svg')}
                 />

@@ -13,7 +13,6 @@ import {debounce} from 'lodash';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
 import {signalService} from '../signalr-service';
 import type {AxiosError} from 'axios';
-import {AccessToken, LoginManager} from 'react-native-fbsdk-next';
 import {accountRepository} from 'src/repositories/account-repository';
 import {useSetRecoilState} from 'recoil';
 import {appUserAtom} from 'src/store/atoms/appUserAtom';
@@ -146,51 +145,7 @@ export function useLoginDefault(): [
     }
   }, [loading]);
 
-  const handleLoginFacebook = React.useCallback(async () => {
-    await LoginManager.logOut();
-    const permissions = await LoginManager.logInWithPermissions([
-      'public_profile',
-    ]);
-    if (permissions.isCancelled) {
-      // showError(translate('login.loginFB.Cancelled'));
-    } else {
-      const token = await AccessToken.getCurrentAccessToken();
-      const idToken = token.accessToken;
-
-      if (!loading && idToken) {
-        dispatch({
-          type: UserReducerActionType.turnOnLoading,
-        });
-        // if (globalState.user) {
-        //   await globalState.removeUser();
-        // }
-        return accountRepository
-          .loginFacebook(idToken)
-          .toPromise()
-          .then(
-            debounce(async () => {
-              // await globalState.saveUser(authenticatedUser);
-              // await endUserRepository.update(authenticatedUser);
-              if (!signalService.hubSyncConnection()) {
-                await signalService.hubConnectionSignalr();
-              }
-            }, DEBOUNCE_TIME),
-            (error: AxiosError<AppUser>) => {
-              if (error.response?.status === 400 && error.response?.data) {
-                dispatch({
-                  type: UserReducerActionType.showError,
-                  user: error.response.data,
-                });
-              }
-              dispatch({
-                type: UserReducerActionType.turnOffLoading,
-              });
-              throw error;
-            },
-          );
-      }
-    }
-  }, [loading]);
+  const handleLoginFacebook = React.useCallback(async () => {}, []);
 
   React.useEffect(() => {
     let cancel = false;

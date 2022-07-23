@@ -29,6 +29,8 @@ export class AppUser extends Model {
 
   public rowId?: string;
 
+  public token?: string;
+
   public sex?: Sex;
 
   public status?: Status;

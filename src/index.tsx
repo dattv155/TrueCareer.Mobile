@@ -30,6 +30,12 @@ import LoginNavigator from './navigators/LoginNavigator';
 import {RecoilRoot, useRecoilValue} from 'recoil';
 import Spinner from 'react-native-spinkit';
 import {appUserAtom} from './store/atoms/appUserAtom';
+import RecoilNexus from 'recoil-nexus';
+import {server} from 'src/config';
+import {atomicStyles} from 'src/styles';
+import {conversationRepository} from './repositories/conversation-repository';
+import {conversationMessageRepository} from './repositories/conversation-message-repository';
+import TruesightChat from 'react-native-truesight-chat';
 
 if (__DEV__) {
   addReactNDevTools();
@@ -39,6 +45,22 @@ if (__DEV__) {
    */
   require('react-native-keep-awake').default.activate();
 }
+
+TruesightChat.config({
+  serverUrl: server.serverUrl,
+  atomicStyles: atomicStyles,
+  listConversation: conversationRepository.list,
+  countConversation: conversationRepository.count,
+  listConversationMessage: conversationMessageRepository.list,
+  countConversationMessage: conversationMessageRepository.count,
+  listConversationAttachment:
+    conversationMessageRepository.listConversationAttachment,
+  countConversationAttachment:
+    conversationMessageRepository.countConversationAttachment,
+  multiUploadFile: conversationRepository.multiUploadFile,
+  create: conversationMessageRepository.create,
+  singleListGlobalUser: conversationRepository.singleListGlobalUser,
+});
 
 const App = React.lazy(async () => {
   await appStorage.initialize();
@@ -120,6 +142,7 @@ const AppEntry: FC = () => {
 
   return (
     <RecoilRoot>
+      <RecoilNexus />
       <Provider store={store}>
         <SafeAreaProvider>
           <StatusBar barStyle="light-content" />

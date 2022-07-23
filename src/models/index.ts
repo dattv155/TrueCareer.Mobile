@@ -18,12 +18,6 @@ import nameof from 'ts-nameof.macro';
 import {ObjectField} from 'react3l-decorators';
 import {AppUser} from './AppUser';
 import {AppUserRoleMapping} from './AppUserRoleMapping';
-import {Conversation} from './Conversation';
-import {ConversationConfiguration} from './ConversationConfiguration';
-import {ConversationParticipant} from './ConversationParticipant';
-import {ConversationType} from './ConversationType';
-import {GlobalUser} from './GlobalUser';
-import {GlobalUserType} from './GlobalUserType';
 import {Permission} from './Permission';
 import {Role} from './Role';
 import {Status} from './Status';
@@ -46,46 +40,6 @@ ObjectField(Role)(
   nameof(AppUserRoleMapping.prototype.role),
 );
 
-ObjectField(ConversationConfiguration)(
-  Conversation.prototype,
-  nameof(Conversation.prototype.conversationConfiguration),
-);
-
-ObjectField(ConversationType)(
-  Conversation.prototype,
-  nameof(Conversation.prototype.conversationType),
-);
-
-ObjectField(GlobalUser)(
-  Conversation.prototype,
-  nameof(Conversation.prototype.latestGlobalUser),
-);
-
-ObjectField(ConversationType)(
-  ConversationConfiguration.prototype,
-  nameof(ConversationConfiguration.prototype.conversationType),
-);
-
-ObjectField(Status)(
-  ConversationConfiguration.prototype,
-  nameof(ConversationConfiguration.prototype.status),
-);
-
-ObjectField(Conversation)(
-  ConversationParticipant.prototype,
-  nameof(ConversationParticipant.prototype.conversation),
-);
-
-ObjectField(GlobalUser)(
-  ConversationParticipant.prototype,
-  nameof(ConversationParticipant.prototype.globalUser),
-);
-
-ObjectField(GlobalUserType)(
-  GlobalUser.prototype,
-  nameof(GlobalUser.prototype.globalUserType),
-);
-
 ObjectField(Role)(Permission.prototype, nameof(Permission.prototype.role));
 
 ObjectField(Status)(Permission.prototype, nameof(Permission.prototype.status));
@@ -93,16 +47,6 @@ ObjectField(Status)(Permission.prototype, nameof(Permission.prototype.status));
 export * from './AppUser';
 
 export * from './AppUserRoleMapping';
-
-export * from './Conversation';
-
-export * from './ConversationConfiguration';
-
-export * from './ConversationParticipant';
-
-export * from './ConversationType';
-
-export * from './GlobalUser';
 
 export * from './GlobalUserType';
 

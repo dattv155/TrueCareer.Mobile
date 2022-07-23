@@ -10,17 +10,22 @@ import {Repository} from 'react3l-common';
 import {PLATFORM_IS_IOS} from 'src/config';
 import kebabCase from 'lodash/kebabCase';
 import type {
-  ConversationConfigurationFilter,
+  ConversationFile,
   ConversationFilter,
-  ConversationTypeFilter,
   GlobalUserFilter,
-} from 'src/models';
+  ConversationConfigurationFilter,
+  ConversationTypeFilter,
+} from 'react-native-truesight-chat';
 import {
   Conversation,
   ConversationConfiguration,
   ConversationType,
   GlobalUser,
-} from 'src/models';
+} from 'react-native-truesight-chat';
+import {getFileName} from 'src/helpers/file-helper';
+import type {Image} from 'react-native-image-crop-picker';
+import type {ImagePickerResponse} from 'src/core/ImagePickerResponse';
+import type {DocumentPickerResponse} from 'react-native-document-picker';
 
 export class ConversationRepository extends Repository {
   constructor() {
@@ -121,64 +126,64 @@ export class ConversationRepository extends Repository {
       .pipe(Repository.responseMapToList<GlobalUser>(GlobalUser));
   };
 
-  // public readonly uploadFile = (
-  //   image: ImagePickerResponse,
-  // ): Observable<ConversationFile> => {
-  //   const formData = new FormData();
-  //
-  //   formData.append('file', {
-  //     name: PLATFORM_IS_IOS ? image.fileName : getFileName(image.uri, true),
-  //     filename: PLATFORM_IS_IOS ? image.fileName : getFileName(image.uri, true),
-  //     type: image.type,
-  //     uri: fileURICleaner(image.uri),
-  //     timestamp: image.timestamp,
-  //   });
-  //
-  //   return this.http
-  //     .post<ConversationFile>(kebabCase(nameof(this.uploadFile)), formData)
-  //     .pipe(map((response: AxiosResponse<ConversationFile>) => response.data));
-  // };
-  //
-  // public readonly multiUploadFile = (
-  //   images: ImagePickerResponse[] | DocumentPickerResponse[],
-  // ): Observable<ConversationFile[]> => {
-  //   const formData = new FormData();
-  //
-  //   images.map(image => {
-  //     if ('fileName' in image) {
-  //       formData.append('files', {
-  //         name: PLATFORM_IS_IOS ? image.fileName : getFileName(image.uri, true),
-  //         filename: PLATFORM_IS_IOS
-  //           ? image.fileName
-  //           : getFileName(image.uri, true),
-  //         type: image.type,
-  //         uri: fileURICleaner(image.uri),
-  //         timestamp: image.timestamp,
-  //       } as any);
-  //     } else {
-  //       formData.append('files', {
-  //         name: image.name,
-  //         filename: image.name,
-  //         type: image.type,
-  //         uri: image.uri,
-  //         timestamp: new Date().getTime(),
-  //       } as any);
-  //     }
-  //   });
-  //
-  //   return this.http
-  //     .post<ConversationFile[]>(
-  //       kebabCase(nameof(this.multiUploadFile)),
-  //       formData,
-  //       {headers: {'Content-Type': 'multipart/form-data'}},
-  //     )
-  //     .pipe(
-  //       map((response: AxiosResponse<ConversationFile[]>) => response.data),
-  //     );
-  // };
+  public readonly uploadFile = (
+    image: ImagePickerResponse,
+  ): Observable<ConversationFile> => {
+    const formData = new FormData();
+
+    formData.append('file', {
+      name: PLATFORM_IS_IOS ? image.fileName : getFileName(image.uri, true),
+      filename: PLATFORM_IS_IOS ? image.fileName : getFileName(image.uri, true),
+      type: image.type,
+      uri: fileURICleaner(image.uri),
+      timestamp: image.timestamp,
+    });
+
+    return this.http
+      .post<ConversationFile>(kebabCase(nameof(this.uploadFile)), formData)
+      .pipe(map((response: AxiosResponse<ConversationFile>) => response.data));
+  };
+
+  public readonly multiUploadFile = (
+    images: ImagePickerResponse[] | DocumentPickerResponse[],
+  ): Observable<ConversationFile[]> => {
+    const formData = new FormData();
+
+    images.map(image => {
+      if ('fileName' in image) {
+        formData.append('files', {
+          name: PLATFORM_IS_IOS ? image.fileName : getFileName(image.uri, true),
+          filename: PLATFORM_IS_IOS
+            ? image.fileName
+            : getFileName(image.uri, true),
+          type: image.type,
+          uri: fileURICleaner(image.uri),
+          timestamp: image.timestamp,
+        } as any);
+      } else {
+        formData.append('files', {
+          name: image.name,
+          filename: image.name,
+          type: image.type,
+          uri: image.uri,
+          timestamp: new Date().getTime(),
+        } as any);
+      }
+    });
+
+    return this.http
+      .post<ConversationFile[]>(
+        kebabCase(nameof(this.multiUploadFile)),
+        formData,
+        {headers: {'Content-Type': 'multipart/form-data'}},
+      )
+      .pipe(
+        map((response: AxiosResponse<ConversationFile[]>) => response.data),
+      );
+  };
 
   public readonly uploadAvatar = (
-    image: any,
+    image: Image,
     conversationId: number,
   ): Observable<Conversation> => {
     const formData = new FormData();

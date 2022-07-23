@@ -4,7 +4,8 @@ import {HubConnectionState} from '@microsoft/signalr';
 import {send} from 'src/services/signalr-service/send';
 import {useCheckInternet} from 'src/services/signalr-service/use-check-internet';
 import type {AppStateStatus} from 'react-native';
-import store from 'src/store';
+import {getRecoil} from 'recoil-nexus';
+import {appUserAtom} from 'src/store/atoms/appUserAtom';
 
 export class SignalService {
   protected hubConnection: HubConnection | null = null;
@@ -46,8 +47,8 @@ export class SignalService {
   public readonly handleAppState = async (state: AppStateStatus) => {
     switch (state) {
       case 'active':
-        const token = store.getState().authentication?.token!;
-        if (token && !this.hubConnection) {
+        const token = getRecoil(appUserAtom)?.token;
+        if (token) {
           await this.hubConnectionSignalr();
         }
         break;
