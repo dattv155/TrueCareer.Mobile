@@ -58,9 +58,9 @@ export function MentorItem(
               <SvgIcon component={require('assets/icons/connection.svg')} />
               <Text
                 style={[
-                  atomicStyles.textBold,
+                  atomicStyles.bold,
                   atomicStyles.ml1,
-                  styles.connectionText,
+                  atomicStyles.textBlue,
                 ]}>
                 50
               </Text>
@@ -73,7 +73,14 @@ export function MentorItem(
             atomicStyles.justifyContentBetween,
             atomicStyles.alignItemsStart,
           ]}>
-          <Text style={[atomicStyles.h2, styles.textName]}>Dat Vu Trong</Text>
+          <Text
+            style={[
+              atomicStyles.bold,
+              styles.textName,
+              atomicStyles.textPrimary,
+            ]}>
+            Dat Vu Trong
+          </Text>
           <Text
             style={[atomicStyles.h5, atomicStyles.mt2, styles.textTitle]}
             numberOfLines={2}>

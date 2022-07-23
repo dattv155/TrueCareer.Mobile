@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './TabNavigator.scss';
-import type {PropsWithChildren, ReactElement} from 'react';
+import type {PropsWithChildren, ReactElement, FC} from 'react';
 import nameof from 'ts-nameof.macro';
 import {useTranslation} from 'react-i18next';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
@@ -19,8 +19,18 @@ import StudyIcon from 'src/components/icons/StudyIcon';
 import ExploreIcon from 'src/components/icons/ExploreIcon';
 import ProfileIcon from 'src/components/icons/ProfileIcon';
 import {Lang} from 'src/config/lang';
+import {StyleSheet, Text} from 'react-native';
+import {atomicStyles} from 'src/styles';
 
 const {Navigator, Screen} = createBottomTabNavigator();
+
+const tabs: FC<PropsWithChildren<any>>[] = [
+  HomeScreen,
+  MentorScreen,
+  ProfileScreen,
+  ExploreScreen,
+  StudyScreen,
+];
 
 export function TabNavigator(
   props: PropsWithChildren<TabNavigatorProps>,
@@ -48,56 +58,80 @@ export function TabNavigator(
         right: 0,
       }}
       initialRouteName={HomeScreen.displayName}>
-      <Screen
-        key={HomeScreen.displayName!}
-        name={HomeScreen.displayName!}
-        component={HomeScreen}
-        initialParams={{}}
-        options={{
-          tabBarLabel: translate(Lang.Tab.Home),
-          tabBarIcon: ({focused}) => <HomeIcon focus={focused} />,
-        }}
-      />
-      <Screen
-        key={MentorScreen.displayName!}
-        name={MentorScreen.displayName!}
-        component={MentorScreen}
-        initialParams={{}}
-        options={{
-          tabBarLabel: translate(Lang.Tab.Mentor),
-          tabBarIcon: ({focused}) => <MentorIcon focus={focused} />,
-        }}
-      />
-      <Screen
-        key={StudyScreen.displayName!}
-        name={StudyScreen.displayName!}
-        component={StudyScreen}
-        initialParams={{}}
-        options={{
-          tabBarLabel: translate(Lang.Tab.Study),
-          tabBarIcon: ({focused}) => <StudyIcon focus={focused} />,
-        }}
-      />
-      <Screen
-        key={ExploreScreen.displayName!}
-        name={ExploreScreen.displayName!}
-        component={ExploreScreen}
-        initialParams={{}}
-        options={{
-          tabBarLabel: translate(Lang.Tab.Explore),
-          tabBarIcon: ({focused}) => <ExploreIcon focus={focused} />,
-        }}
-      />
-      <Screen
-        key={ProfileScreen.displayName!}
-        name={ProfileScreen.displayName!}
-        component={ProfileScreen}
-        initialParams={{}}
-        options={{
-          tabBarLabel: translate(Lang.Tab.Profile),
-          tabBarIcon: ({focused}) => <ProfileIcon focus={focused} />,
-        }}
-      />
+      {tabs.map(ScreenComponent => (
+        <Screen
+          key={ScreenComponent.displayName!}
+          name={ScreenComponent.displayName!}
+          component={ScreenComponent}
+          initialParams={{}}
+          options={{
+            tabBarLabelPosition: 'below-icon',
+            tabBarIcon({focused}) {
+              switch (ScreenComponent.displayName!) {
+                case HomeScreen.displayName!:
+                  return <HomeIcon focus={focused} />;
+
+                case MentorScreen.displayName:
+                  return <MentorIcon focus={focused} />;
+
+                case StudyScreen.displayName:
+                  return <StudyIcon focus={focused} />;
+
+                case ExploreScreen.displayName:
+                  return <ExploreIcon focus={focused} />;
+
+                case ProfileScreen.displayName:
+                  return <ProfileIcon focus={focused} />;
+              }
+            },
+            tabBarLabel({focused}) {
+              let label = '';
+              switch (ScreenComponent.displayName!) {
+                case HomeScreen.displayName!:
+                  label = translate(Lang.Tab.Home);
+                  break;
+
+                case MentorScreen.displayName:
+                  label = translate(Lang.Tab.Mentor);
+                  break;
+
+                case StudyScreen.displayName:
+                  label = translate(Lang.Tab.Study);
+                  break;
+
+                case ExploreScreen.displayName:
+                  label = translate(Lang.Tab.Explore);
+                  break;
+
+                case ProfileScreen.displayName:
+                  label = translate(Lang.Tab.Profile);
+                  break;
+
+                default:
+                  break;
+              }
+
+              if (focused) {
+                return (
+                  <Text style={[atomicStyles.text, styles.focusedText]}>
+                    {label}
+                  </Text>
+                );
+              }
+
+              return (
+                <Text
+                  style={StyleSheet.flatten([
+                    atomicStyles.text,
+                    focused ? undefined : atomicStyles.textSecondary,
+                  ])}>
+                  {label}
+                </Text>
+              );
+            },
+          }}
+        />
+      ))}
     </Navigator>
   );
 }
