@@ -14,7 +14,7 @@ const RootNavigator: FC<
     <Navigator
       initialRouteName={TabNavigator.displayName!}
       screenOptions={{headerShown: false}}>
-      {Object.values(Screens).map((ScreenComponent: any) => (
+      {[...Object.values(Screens)].map((ScreenComponent: any) => (
         <Screen
           component={ScreenComponent}
           name={ScreenComponent.displayName!}

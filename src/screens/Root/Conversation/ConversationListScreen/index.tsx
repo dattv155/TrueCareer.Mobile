@@ -8,10 +8,10 @@ import DefaultLayout from 'src/components/templates/DefaultLayout';
 import SvgIcon from 'src/components/atoms/SvgIcon';
 import {atomicStyles} from 'src/styles';
 import {ConversationFlatList} from 'react-native-truesight-chat';
-import ConversationChatScreen from 'src/screens/Root/ConversationChatScreen';
 import {useRecoilValue} from 'recoil';
 import {globalUserAtom} from 'src/store/atoms/globalUserAtom';
 import {conversationService} from 'src/services/conversation-service';
+import ConversationChatScreen from '../ConversationChatScreen';
 
 export function ConversationListScreen(
   props: PropsWithChildren<ConversationListScreenProps>,
