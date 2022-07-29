@@ -31,3 +31,7 @@ export enum AccountEndpoints {
   ACCOUNT_HREF = '/rpc/truecareer/account',
   PROFILE_HREF = '/rpc/truecareer/profile',
 }
+
+export enum SchoolEndpoints {
+  SCHOOL_HREF = '/rpc/truecareer/school',
+}
