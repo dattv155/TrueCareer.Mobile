@@ -43,11 +43,11 @@
 
 
 .textPrimary {
-  color: map-get($colors, "text-primary");
+  color: map-get($colors, "primary");
 }
 
 .textSecondary {
-  color: map-get($colors, "text-secondary");
+  color: map-get($colors, "gray");
 }
 
 

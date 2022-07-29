@@ -1,15 +1,6 @@
 @import "variable";
 @import "colors";
 
-
-.textBold {
-  font-family: map-get($font-families, "bold");
-  font-size: 15px;
-  line-height: 18px;
-  font-weight: 600;
-  color: map-get($colors, "text-primary");
-}
-
 .texRegular {
   font-family: map-get($map: $font-families, $key: regular);
   font-size: 15px;

@@ -45,7 +45,8 @@ export function WelcomeScreen(
           ]}>
           {'Chào mừng bạn đã đến với \n ứng dụng TrueCareer'}
         </Text>
-        <Text style={[atomicStyles.h3, atomicStyles.textWhite]}>
+        <Text
+          style={[atomicStyles.h3, atomicStyles.textWhite, atomicStyles.bold]}>
           {'Hãy chọn cách đăng nhập của mình'}
         </Text>
         <TouchableOpacity
@@ -61,7 +62,11 @@ export function WelcomeScreen(
           </View>
           <View style={[styles.rightView]}>
             <Text
-              style={[atomicStyles.h4, atomicStyles.textWhite, styles.text]}>
+              style={[
+                atomicStyles.h4,
+                atomicStyles.textWhite,
+                atomicStyles.bold,
+              ]}>
               Đăng nhập với Facebook
             </Text>
           </View>

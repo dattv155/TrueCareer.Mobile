@@ -6,7 +6,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {name as appName} from 'app.json';
 import type {FC} from 'react';
 import React, {Suspense} from 'react';
-import {AppRegistry, AppState, Platform, StatusBar} from 'react-native';
+import {AppRegistry, AppState, StatusBar} from 'react-native';
 import 'react-native-gesture-handler';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {Provider} from 'react-redux';
@@ -16,14 +16,12 @@ import vi from 'src/i18n/vi.json';
 import i18next from 'i18next';
 import nameof from 'ts-nameof.macro';
 import {initReactI18next} from 'react-i18next';
-import addReactNDevTools from 'reactn-devtools';
 import {useReduxDevToolsExtension} from '@react-navigation/devtools';
-import {appStorage, globalState} from 'src/app';
+import {appStorage} from 'src/app';
 import {appSettingsSlice} from 'src/store/app-settings';
-import {APP_SERVER_URL} from 'src/config/consts';
+import {APP_SERVER_URL, PLATFORM_IS_IOS} from 'src/config/consts';
 import {authenticationSlice} from 'src/store/authentication';
 import {signalService} from 'src/services/signalr-service';
-import SplashScreen from 'react-native-splash-screen';
 import {navigationRef} from 'src/config/navigation';
 import RootNavigator from './navigators/RootNavigator/RootNavigator';
 import LoginNavigator from './navigators/LoginNavigator';
@@ -39,8 +37,6 @@ import TruesightChat from 'react-native-truesight-chat';
 import {ModelFilter} from 'react3l-common';
 
 if (__DEV__) {
-  addReactNDevTools();
-
   /**
    * Keep device screen awake on development
    */
@@ -70,7 +66,6 @@ TruesightChat.config({
 
 const App = React.lazy(async () => {
   await appStorage.initialize();
-  await globalState.initialize();
 
   store.dispatch(
     appSettingsSlice.actions.loadAppSettings({
@@ -118,9 +113,8 @@ const App = React.lazy(async () => {
       const user = useRecoilValue(appUserAtom);
 
       React.useEffect(() => {
-        if (Platform.OS !== 'android') {
-          SplashScreen.hide();
-        }
+        PLATFORM_IS_IOS && require('react-native-splash-screen').default.hide();
+
         return function cleanup() {
           subscription.remove();
         };
