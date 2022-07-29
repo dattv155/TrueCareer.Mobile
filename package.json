@@ -65,7 +65,7 @@
     "react-native-svg": "^12.1.1",
     "react-native-tab-view": "^3.1.1",
     "react-native-toasty": "^2.0.0",
-    "react-native-truesight-chat": "^0.1.2-rc.15",
+    "react-native-truesight-chat": "^0.1.2",
     "react-native-vector-icons": "^9.1.0",
     "react-recoil-flipper-client": "^1.0.1",
     "react-redux": "^7.2.6",
@@ -83,7 +83,7 @@
     "redux-flipper": "^2.0.1",
     "reflect-metadata": "^0.1.13",
     "rn-redux-middleware-flipper": "^0.1.0",
-    "rxjs": "^7.5.4",
+    "rxjs": "^7.5.5",
     "yup": "^0.32.11"
   },
   "devDependencies": {

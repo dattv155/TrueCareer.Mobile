@@ -36,6 +36,7 @@ import {atomicStyles} from 'src/styles';
 import {conversationRepository} from './repositories/conversation-repository';
 import {conversationMessageRepository} from './repositories/conversation-message-repository';
 import TruesightChat from 'react-native-truesight-chat';
+import {ModelFilter} from 'react3l-common';
 
 if (__DEV__) {
   addReactNDevTools();
@@ -45,6 +46,9 @@ if (__DEV__) {
    */
   require('react-native-keep-awake').default.activate();
 }
+
+ModelFilter.prototype.skip = 0;
+ModelFilter.prototype.take = 10;
 
 TruesightChat.config({
   serverUrl: server.serverUrl,
@@ -57,9 +61,11 @@ TruesightChat.config({
     conversationMessageRepository.listConversationAttachment,
   countConversationAttachment:
     conversationMessageRepository.countConversationAttachment,
-  multiUploadFile: conversationRepository.multiUploadFile,
-  create: conversationMessageRepository.create,
   singleListGlobalUser: conversationRepository.singleListGlobalUser,
+  multiUploadFile: conversationMessageRepository.multiUploadFile,
+  create: conversationMessageRepository.create,
+  get: conversationRepository.get,
+  update: conversationRepository.update,
 });
 
 const App = React.lazy(async () => {
