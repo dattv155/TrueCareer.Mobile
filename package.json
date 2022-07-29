@@ -53,6 +53,7 @@
     "react-native-keychain": "^8.1.0",
     "react-native-linear-gradient": "^2.5.6",
     "react-native-modal": "^13.0.0",
+    "react-native-pager-view": "^5.4.25",
     "react-native-permissions": "^3.4.0",
     "react-native-reanimated": "2.4.1",
     "react-native-reanimated-carousel": "^2.3.4",
