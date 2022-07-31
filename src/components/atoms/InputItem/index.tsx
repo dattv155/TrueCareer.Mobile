@@ -9,8 +9,17 @@ import {TextInput, TouchableOpacity, View} from 'react-native';
 export function InputItem(
   props: PropsWithChildren<InputItemProps>,
 ): ReactElement {
-  const {title, value, onChange, icon, style, onIconPress, ...restProps} =
-    props;
+  const {
+    title,
+    value,
+    onChange,
+    icon,
+    style,
+    onIconPress,
+    height,
+    multiline,
+    ...restProps
+  } = props;
 
   return (
     <>
@@ -32,14 +41,17 @@ export function InputItem(
           <TextInput
             style={[
               atomicStyles.w100,
-              atomicStyles.light,
               atomicStyles.h5,
+              atomicStyles.light,
               atomicStyles.textGray,
+              height && {height: height},
             ]}
+            textAlignVertical={'top'}
             placeholderTextColor={Colors.Gray}
             placeholder={title}
             value={value}
             onChangeText={onChange}
+            multiline={multiline ?? false}
           />
         </View>
         {icon && (
@@ -63,6 +75,10 @@ export interface InputItemProps extends ViewProps {
   onIconPress?: () => void;
 
   style?: StyleProp<ViewStyle>;
+
+  height?: number;
+
+  multiline?: boolean;
 }
 
 InputItem.defaultProps = {

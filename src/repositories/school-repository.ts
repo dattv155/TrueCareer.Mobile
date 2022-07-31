@@ -1,5 +1,5 @@
 import {Repository} from 'react3l-common';
-import {SchoolEndpoints, httpConfig, server} from 'src/config';
+import {Endpoints, httpConfig, server} from 'src/config';
 import type {Observable} from 'rxjs';
 import kebabCase from 'lodash/kebabCase';
 import nameof from 'ts-nameof.macro';
@@ -10,7 +10,7 @@ export class SchoolRepository extends Repository {
   constructor() {
     super(httpConfig);
     server.subscribeServerUrl((serverUrl: string) => {
-      this.baseURL = new URL(SchoolEndpoints.SCHOOL_HREF, serverUrl).href;
+      this.baseURL = new URL(Endpoints.SCHOOL_HREF, serverUrl).href;
     });
   }
 

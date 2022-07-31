@@ -1,7 +1,8 @@
 import {Model} from 'react3l-common';
-import type {MentorApprovalStatus} from 'models/MentorApprovalStatus';
-import type {Topic} from 'models/Topic';
-import type {AppUser} from 'models/AppUser';
+import type {MentorInfo} from 'src/models/MentorInfo';
+import type {MentorApprovalStatus} from 'src/models/MentorApprovalStatus';
+import type {Topic} from '../Topic';
+import type {AppUser} from '../AppUser';
 
 export class MentorRegisterRequest extends Model {
   public id?: number;
@@ -17,4 +18,6 @@ export class MentorRegisterRequest extends Model {
   public topic?: Topic;
 
   public user?: AppUser;
+
+  public mentorInfo?: MentorInfo;
 }

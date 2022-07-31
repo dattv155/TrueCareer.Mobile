@@ -21,17 +21,14 @@ export enum NotificationEndpoints {
   BASE_HREF = '/rpc/utils/user-notification',
 }
 
-export enum ConstructionEndpoints {
-  PROFILE_HREF = '/rpc/construction/profile',
-  TIME_KEEPING_HREF = '/rpc/construction/time-keeping',
-  DOCUMENT_HREF = '/rpc/construction/document',
-}
-
 export enum AccountEndpoints {
   ACCOUNT_HREF = '/rpc/truecareer/account',
   PROFILE_HREF = '/rpc/truecareer/profile',
 }
 
-export enum SchoolEndpoints {
+export enum Endpoints {
   SCHOOL_HREF = '/rpc/truecareer/school',
+  MAJOR_HREF = '/rpc/truecareer/major',
+  ACTIVE_TIME_HREF = '/rpc/truecareer/active-time',
+  MENTOR_REGISTER_HREF = '/rpc/truecareer/mentor-register-request',
 }

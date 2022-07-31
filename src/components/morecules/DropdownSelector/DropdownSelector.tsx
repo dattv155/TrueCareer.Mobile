@@ -29,12 +29,13 @@ const DropdownSelector: FC<PropsWithChildren<DropdownSelectorProps>> = (
   } = props;
   const [dropdown, toggleDropdown] = useBoolean(false);
 
-  const [currentSelection, setCurrentSelection] = React.useState(initial);
+  const [currentSelection, setCurrentSelection] =
+    React.useState<OptionType>(initial);
 
   const handleSelect = React.useCallback(
-    (value: any) => {
+    (value: OptionType) => {
       if (typeof onSelect === 'function') {
-        onSelect(value);
+        onSelect(value.id);
       }
       setCurrentSelection(value);
       toggleDropdown();
@@ -113,7 +114,7 @@ export interface DropdownSelectorProps extends ViewProps {
   optionLabelStyle?: StyleProp<TextStyle>;
   iconRight?: ReactElement;
   listLabelOptions?: string[];
-  onSelect?: (item: OptionType) => void;
+  onSelect?: (value: number) => void;
   initial?: any;
   listOptions?: OptionType[];
 }

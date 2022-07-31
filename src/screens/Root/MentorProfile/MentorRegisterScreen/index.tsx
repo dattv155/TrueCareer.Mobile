@@ -17,6 +17,7 @@ import DropdownSelector from 'src/components/morecules/DropdownSelector/Dropdown
 import type {OptionType} from 'src/types/General';
 import InputItem from 'src/components/atoms/InputItem';
 import type {StackScreenProps} from '@react-navigation/stack';
+import {mentorService} from 'src/services/mentor-service';
 
 const listConnectionType: OptionType[] = [
   {
@@ -38,15 +39,20 @@ export function MentorRequestScreen(
 ): ReactElement {
   const {} = props;
 
-  const handleSelectConnection = React.useCallback((value: OptionType) => {},
-  []);
-
-  const [index, setIndex] = React.useState(0);
+  const [
+    tabIndex,
+    handleChangeIndex,
+    listMajor,
+    listActiveTimeOption,
+    handleSelectConnection,
+    handleSelectTopic,
+    handleSelectActiveTime,
+  ] = mentorService.useMentorRegister();
 
   const [routes] = React.useState<Route[]>([
-    {key: '1', title: '-'},
-    {key: '2', title: '-'},
-    {key: '3', title: '-'},
+    {key: '1', title: ''},
+    {key: '2', title: ''},
+    {key: '3', title: ''},
   ]);
 
   const GeneralTab = () =>
@@ -54,7 +60,8 @@ export function MentorRequestScreen(
       return (
         <MentorInformationForm
           title={translate('Thông tin cơ bản')}
-          nextTitle={translate('Tiếp tục')}>
+          nextTitle={translate('Tiếp tục')}
+          onGoNext={() => {}}>
           <View style={[atomicStyles.mt4]}>
             <DropdownSelector
               title={translate('Hình thức kết nối *')}
@@ -69,21 +76,61 @@ export function MentorRequestScreen(
       );
     }, []);
 
-  const TopicTab = () => (
-    <View style={[atomicStyles.flex]}>
-      <Text style={[atomicStyles.textDark, atomicStyles.h5]}>
-        Định hướng & Chia sẻ kinh nghiệm nghề nghiệp
-      </Text>
-    </View>
-  );
+  const TopicTab = () =>
+    React.useMemo(() => {
+      return (
+        <MentorInformationForm
+          title={translate('Định hướng & Chia sẻ kinh nghiệm nghề nghiệp')}
+          nextTitle={translate('Tiếp tục')}
+          onGoNext={() => {}}>
+          <View style={[atomicStyles.mt4]}>
+            <DropdownSelector
+              title={translate('Lĩnh vực *')}
+              titleStyle={[atomicStyles.textBold]}
+              listOptions={listMajor}
+              onSelect={handleSelectTopic}
+            />
 
-  const ActiveTimeTab = () => (
-    <View style={[atomicStyles.flex]}>
-      <Text style={[atomicStyles.textDark, atomicStyles.h5]}>
-        Lựa chọn thời gian rảnh để hẹn gặp Mentee
-      </Text>
-    </View>
-  );
+            <Text
+              style={[
+                atomicStyles.textDark,
+                atomicStyles.h5,
+                atomicStyles.text,
+                atomicStyles.my4,
+              ]}>
+              {translate('Mô tả nôi dung định hướng')}
+            </Text>
+
+            <InputItem
+              title={'Nội dung định hướng'}
+              height={260}
+              multiline={true}
+            />
+          </View>
+        </MentorInformationForm>
+      );
+    }, []);
+
+  const ActiveTimeTab = () =>
+    React.useMemo(() => {
+      return (
+        <MentorInformationForm
+          title={translate('Lựa chọn thời gian rảnh để hẹn gặp Mentee')}
+          nextTitle={translate('Hoàn thành')}
+          onGoNext={() => {}}>
+          <View style={[atomicStyles.mt4]}>
+            <DropdownSelector
+              title={translate('Chọn khoảng thời gian')}
+              titleStyle={[atomicStyles.textBold]}
+              listOptions={listActiveTimeOption}
+              onSelect={handleSelectActiveTime}
+            />
+
+            <InputItem title={'Chọn ngày'} style={[atomicStyles.mt4]} />
+          </View>
+        </MentorInformationForm>
+      );
+    }, []);
 
   const renderTabBar = (
     prop: SceneRendererProps & {
@@ -103,9 +150,7 @@ export function MentorRequestScreen(
           });
 
           return (
-            <TouchableOpacity
-              style={styles.tabItem}
-              onPress={() => setIndex(i)}>
+            <TouchableOpacity style={styles.tabItem} onPress={() => {}}>
               <Animated.Text style={{opacity}}>{route.title}</Animated.Text>
             </TouchableOpacity>
           );
@@ -123,10 +168,10 @@ export function MentorRequestScreen(
   return (
     <>
       <TabView
-        navigationState={{index, routes}}
+        navigationState={{index: tabIndex, routes}}
         renderScene={renderScene}
         // renderTabBar={renderTabBar}
-        onIndexChange={(index: number) => setIndex(index)}
+        onIndexChange={handleChangeIndex}
         initialLayout={{width: SCREEN_WIDTH}}
       />
     </>

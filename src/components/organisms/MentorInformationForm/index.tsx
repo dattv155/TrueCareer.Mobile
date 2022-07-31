@@ -21,12 +21,12 @@ export function MentorInformationForm(
 
   return (
     <View style={[atomicStyles.flex]}>
-      <View style={[styles.headerContainer]}>
+      <View style={[atomicStyles.mx4, styles.headerContainer]}>
         <Text
           style={[
             atomicStyles.h3,
             atomicStyles.textBold,
-            atomicStyles.textBlue,
+            atomicStyles.textPrimary,
           ]}>
           {title}
         </Text>
