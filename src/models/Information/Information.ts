@@ -1,8 +1,7 @@
 import {Model} from 'react3l-common';
-import type {Moment} from 'moment';
-import type {InformationType} from 'models/InformationType';
-import type {Topic} from 'models/Topic';
-import type {AppUser} from 'models/AppUser';
+import type {AppUser} from '../AppUser';
+import type {InformationType} from '../InformationType';
+import type {Topic} from '../Topic';
 
 export class Information extends Model {
   public id?: number;
@@ -13,7 +12,7 @@ export class Information extends Model {
 
   public description?: string;
 
-  public startAt?: Moment;
+  public startAt?: Date;
 
   public role?: string;
 
@@ -23,7 +22,7 @@ export class Information extends Model {
 
   public userId?: number;
 
-  public endAt?: Moment;
+  public endAt?: Date;
 
   public rowId?: string;
 

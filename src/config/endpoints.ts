@@ -31,4 +31,7 @@ export enum Endpoints {
   MAJOR_HREF = '/rpc/truecareer/major',
   ACTIVE_TIME_HREF = '/rpc/truecareer/active-time',
   MENTOR_REGISTER_HREF = '/rpc/truecareer/mentor-register-request',
+  MENTOR_HREF = '/rpc/truecareer/mentor',
+  INFORMATION_HREF = '/rpc/truecareer/information',
+  MENTOR_MENTEE_CONNECTION_HREF = '/rpc/truecareer/mentor-mentee-connection',
 }

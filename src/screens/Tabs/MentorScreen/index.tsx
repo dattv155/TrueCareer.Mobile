@@ -10,6 +10,9 @@ import {atomicStyles} from 'src/styles';
 import SvgIcon from 'src/components/atoms/SvgIcon';
 import SearchBox from 'src/components/morecules/SearchBox';
 import MentorItem from 'src/components/morecules/MentorItem';
+import {mentorService} from 'src/services/mentor-service';
+import type {Mentor} from 'src/models/Mentor';
+import {MentorDetailScreen} from 'src/screens/Root';
 
 export function MentorScreen(
   props: PropsWithChildren<MentorScreenProps>,
@@ -17,6 +20,15 @@ export function MentorScreen(
   const {navigation, route} = props;
 
   const [translate] = useTranslation();
+
+  const [listMentor, loading] = mentorService.useListMentor();
+
+  const handleGotoMentorDetailScreen = React.useCallback(
+    (mentor: Mentor) => {
+      navigation.navigate(MentorDetailScreen.displayName, {mentor: mentor});
+    },
+    [navigation],
+  );
 
   return (
     <>
@@ -28,6 +40,7 @@ export function MentorScreen(
         icon={
           <SvgIcon component={require('assets/icons/large/big-mentor.svg')} />
         }
+        loading={loading}
         contentScrollable={true}
         navigation={navigation}
         route={route}>
@@ -37,7 +50,6 @@ export function MentorScreen(
               atomicStyles.flexRow,
               atomicStyles.alignItemsCenter,
               atomicStyles.justifyContentBetween,
-              atomicStyles.mb4,
             ]}>
             <SearchBox
               placeholder={translate('Tìm kiếm Mentor theo trường/ngành/...')}
@@ -54,10 +66,16 @@ export function MentorScreen(
               <SvgIcon component={require('assets/icons/filter-purple.svg')} />
             </TouchableOpacity>
           </View>
-
-          <MentorItem style={[atomicStyles.mb4]} />
-          <MentorItem style={[atomicStyles.mb4]} />
-          <MentorItem style={[atomicStyles.mb4]} />
+          <ScrollView>
+            {listMentor?.map((mentor, index) => (
+              <MentorItem
+                style={[atomicStyles.mb4]}
+                mentor={mentor}
+                key={index}
+                onPress={() => handleGotoMentorDetailScreen(mentor)}
+              />
+            ))}
+          </ScrollView>
         </ScrollView>
       </DefaultLayout>
     </>

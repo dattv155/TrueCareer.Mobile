@@ -1,7 +1,7 @@
 import {Model} from 'react3l-common';
-import type {MentorConnection} from 'models/MentorConnection';
-import type {ConnectionStatus} from 'models/ConnectionStatus';
-import type {AppUser} from 'models/AppUser';
+import type {AppUser} from '../AppUser';
+import type {ConnectionStatus} from '../ConnectionStatus';
+import type {MentorConnection} from '../MentorConnection';
 
 export class MentorMenteeConnection extends Model {
   public mentorId?: number;

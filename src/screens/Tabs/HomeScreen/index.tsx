@@ -7,7 +7,6 @@ import {atomicStyles} from 'src/styles';
 import {useTranslation} from 'react-i18next';
 import SvgIcon from 'src/components/atoms/SvgIcon';
 import SearchBox from 'src/components/morecules/SearchBox';
-import MentorItem from 'src/components/morecules/MentorItem';
 import type {StackScreenProps} from '@react-navigation/stack';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {ColorStyles} from 'src/styles/themes';
@@ -104,8 +103,8 @@ export function HomeScreen(
               </View>
 
               <View style={[atomicStyles.mt4]}>
-                <MentorItem />
-                <MentorItem />
+                {/*<MentorItem />*/}
+                {/*<MentorItem />*/}
               </View>
             </>
           </View>

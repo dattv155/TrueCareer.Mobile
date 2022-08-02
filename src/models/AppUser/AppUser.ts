@@ -1,5 +1,4 @@
 import {Model} from 'react3l-common';
-import type {Moment} from 'moment';
 import type {Sex} from 'src/models/Sex';
 import type {Status} from 'src/models/Status';
 import type {AppUserRoleMapping} from 'src/models/AppUserRoleMapping';
@@ -21,7 +20,7 @@ export class AppUser extends Model {
 
   public sexId?: number;
 
-  public birthday?: Moment;
+  public birthday?: Date;
 
   public avatar?: string;
 

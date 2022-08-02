@@ -3,29 +3,30 @@ import styles from './MentorItem.scss';
 import type {PropsWithChildren, ReactElement} from 'react';
 import nameof from 'ts-nameof.macro';
 import type {TouchableOpacityProps} from 'react-native';
-import {Image, ScrollView, Text, View} from 'react-native';
+import {Image, ScrollView, Text, TouchableOpacity, View} from 'react-native';
 import {atomicStyles} from 'src/styles';
 import SvgIcon from 'src/components/atoms/SvgIcon';
 import TextItem from 'src/components/atoms/TextItem';
+import type {Mentor} from 'src/models/Mentor';
 
 export function MentorItem(
   props: PropsWithChildren<MentorItemProps>,
 ): ReactElement {
-  const {...rest} = props;
+  const {mentor, onPress, ...rest} = props;
 
   return (
-    <View style={[atomicStyles.mb4]} {...rest}>
+    <TouchableOpacity style={[atomicStyles.mb4]} onPress={onPress} {...rest}>
       <View
         style={[
           atomicStyles.flexRow,
           atomicStyles.alignItemsCenter,
           atomicStyles.justifyContentStart,
+          atomicStyles.borderView,
+          atomicStyles.bgWhite,
+          styles.containerView,
         ]}>
         <View style={[atomicStyles.flexCol, atomicStyles.mr8]}>
-          <Image
-            source={require('assets/images/default-mentor.png')}
-            style={{width: 110, height: 110}}
-          />
+          <Image source={{uri: mentor?.avatar}} style={[styles.avatarView]} />
           <View
             style={[
               atomicStyles.flexRow,
@@ -46,7 +47,7 @@ export function MentorItem(
                   atomicStyles.textBold,
                   styles.heartText,
                 ]}>
-                20
+                {mentor?.likeCount}
               </Text>
             </View>
             <View
@@ -62,7 +63,7 @@ export function MentorItem(
                   atomicStyles.ml1,
                   atomicStyles.textBlue,
                 ]}>
-                50
+                {mentor?.menteeCount}
               </Text>
             </View>
           </View>
@@ -79,38 +80,36 @@ export function MentorItem(
               styles.textName,
               atomicStyles.textPrimary,
             ]}>
-            Dat Vu Trong
+            {mentor?.displayName}
           </Text>
           <Text
             style={[atomicStyles.h5, atomicStyles.mt2, styles.textTitle]}
             numberOfLines={2}>
-            {'Chief Technology Officer'}
+            {mentor?.jobRole}
           </Text>
-          <Text style={[atomicStyles.h6, styles.textSub]}>{'True Career'}</Text>
+          <Text style={[atomicStyles.h6, atomicStyles.light, styles.textSub]}>
+            {mentor?.companyName}
+          </Text>
           <ScrollView
             horizontal={true}
             contentContainerStyle={[styles.titleContainer]}>
             <TextItem
-              text={'Marketing'}
-              containerStyle={[atomicStyles.mr2, atomicStyles.px2]}
-            />
-            <TextItem
-              text={'Marketing'}
-              containerStyle={[atomicStyles.mr2, atomicStyles.px2]}
-            />
-            <TextItem
-              text={'Marketing'}
+              text={'Information Technology'}
+              textStyle={[atomicStyles.text, atomicStyles.light]}
               containerStyle={[atomicStyles.mr2, atomicStyles.px2]}
             />
           </ScrollView>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
 export interface MentorItemProps extends TouchableOpacityProps {
   //
+  mentor?: Mentor;
+
+  onPress?: () => void;
 }
 
 MentorItem.defaultProps = {
