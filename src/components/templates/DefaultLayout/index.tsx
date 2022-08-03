@@ -47,10 +47,10 @@ export function DefaultLayout(
         </View>
         <Text
           style={[
-            atomicStyles.bold,
             atomicStyles.textWhite,
             atomicStyles.h4,
             atomicStyles.mt4,
+            atomicStyles.light,
             styles.subTitle,
           ]}>
           {subTitle}

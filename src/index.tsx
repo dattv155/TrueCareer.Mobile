@@ -29,11 +29,6 @@ import {RecoilRoot, useRecoilValue} from 'recoil';
 import Spinner from 'react-native-spinkit';
 import {appUserAtom} from './store/atoms/appUserAtom';
 import RecoilNexus from 'recoil-nexus';
-import {server} from 'src/config';
-import {atomicStyles} from 'src/styles';
-import {conversationRepository} from './repositories/conversation-repository';
-import {conversationMessageRepository} from './repositories/conversation-message-repository';
-import TruesightChat from 'react-native-truesight-chat';
 import {ModelFilter} from 'react3l-common';
 
 if (__DEV__) {
@@ -46,23 +41,23 @@ if (__DEV__) {
 ModelFilter.prototype.skip = 0;
 ModelFilter.prototype.take = 10;
 
-TruesightChat.config({
-  serverUrl: server.serverUrl,
-  atomicStyles: atomicStyles,
-  listConversation: conversationRepository.list,
-  countConversation: conversationRepository.count,
-  listConversationMessage: conversationMessageRepository.list,
-  countConversationMessage: conversationMessageRepository.count,
-  listConversationAttachment:
-    conversationMessageRepository.listConversationAttachment,
-  countConversationAttachment:
-    conversationMessageRepository.countConversationAttachment,
-  singleListGlobalUser: conversationRepository.singleListGlobalUser,
-  multiUploadFile: conversationMessageRepository.multiUploadFile,
-  create: conversationMessageRepository.create,
-  get: conversationRepository.get,
-  update: conversationRepository.update,
-});
+// TruesightChat.config({
+//   serverUrl: server.serverUrl,
+//   atomicStyles: atomicStyles,
+//   listConversation: conversationRepository.list,
+//   countConversation: conversationRepository.count,
+//   listConversationMessage: conversationMessageRepository.list,
+//   countConversationMessage: conversationMessageRepository.count,
+//   listConversationAttachment:
+//     conversationMessageRepository.listConversationAttachment,
+//   countConversationAttachment:
+//     conversationMessageRepository.countConversationAttachment,
+//   singleListGlobalUser: conversationRepository.singleListGlobalUser,
+//   multiUploadFile: conversationMessageRepository.multiUploadFile,
+//   create: conversationMessageRepository.create,
+//   get: conversationRepository.get,
+//   update: conversationRepository.update,
+// });
 
 const App = React.lazy(async () => {
   await appStorage.initialize();

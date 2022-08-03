@@ -4,4 +4,5 @@ export enum KeyAtoms {
   mentorConnectionAtom = 'mentorConnectionAtom',
   activeTimeAtom = 'activeTimeAtom',
   topicAtom = 'topicAtom',
+  conversationMessageAtom = 'conversationMessageAtom',
 }
