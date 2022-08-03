@@ -21,6 +21,7 @@ import ProfileIcon from 'src/components/icons/ProfileIcon';
 import {Lang} from 'src/config/lang';
 import {StyleSheet, Text} from 'react-native';
 import {atomicStyles} from 'src/styles';
+import {signalService} from 'src/services/signalr-service';
 
 const {Navigator, Screen} = createBottomTabNavigator();
 
@@ -38,6 +39,12 @@ export function TabNavigator(
   const {} = props;
   const [translate] = useTranslation();
   const {bottom} = useSafeAreaInsets();
+
+  React.useEffect(() => {
+    if (!signalService.hubSyncConnection()) {
+      signalService.hubConnectionSignalr().then(() => {});
+    }
+  }, []);
 
   return (
     <Navigator
