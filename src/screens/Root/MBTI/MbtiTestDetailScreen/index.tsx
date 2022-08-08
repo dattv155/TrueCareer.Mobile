@@ -3,7 +3,7 @@ import styles from './MbtiTestDetailScreen.scss';
 import type {PropsWithChildren, ReactElement} from 'react';
 import nameof from 'ts-nameof.macro';
 import {useTranslation} from 'react-i18next';
-import {Text, TouchableOpacity, View} from 'react-native';
+import {StatusBar, Text, TouchableOpacity, View} from 'react-native';
 import SvgIcon from 'src/components/atoms/SvgIcon';
 import {atomicStyles, Colors} from 'src/styles';
 import ButtonComponent from 'src/components/atoms/ButtonComponent';
@@ -21,8 +21,15 @@ export function MbtiTestDetailScreen(
 
   const [translate] = useTranslation();
 
-  const [loading, listQuestion, currentIndex, handleSelectAnswer, handleDone] =
-    mbtiService.useListQuestion();
+  const [
+    loading,
+    listQuestion,
+    currentIndex,
+    currentAnswer,
+    handleSelectChoice,
+    handleSelectAnswer,
+    handleDone,
+  ] = mbtiService.useListQuestion();
 
   const handleGotoExit = React.useCallback(() => {
     navigation.navigate(MbtiTestScreen.displayName);
@@ -30,6 +37,11 @@ export function MbtiTestDetailScreen(
 
   return (
     <>
+      <StatusBar
+        barStyle="dark-content"
+        hidden={false}
+        backgroundColor={Colors.White}
+      />
       <TouchableOpacity style={[styles.goBack]} onPress={handleGotoExit}>
         <SvgIcon component={require('assets/icons/close.svg')} />
       </TouchableOpacity>
@@ -75,17 +87,15 @@ export function MbtiTestDetailScreen(
                           title={choice.description}
                           textStyle={[
                             atomicStyles.text,
-                            indexChoice % 2 === 0
+                            choice.id === currentAnswer?.id
                               ? atomicStyles.textWhite
                               : atomicStyles.textPrimary,
                           ]}
-                          onPress={() =>
-                            handleSelectAnswer(index, choice.mbtiSingleTypeId)
-                          }
+                          onPress={() => handleSelectChoice(choice)}
                           color={Colors.Primary}
                           style={[
                             atomicStyles.mb4,
-                            indexChoice % 2 === 0
+                            choice.id === currentAnswer?.id
                               ? styles.choiceBlue
                               : styles.choiceWhite,
                           ]}
@@ -100,34 +110,24 @@ export function MbtiTestDetailScreen(
           </View>
         </View>
 
-        {listQuestion.length > 0 && currentIndex === listQuestion.length && (
-          <ButtonComponent
-            title={translate('Hoàn thành')}
-            textStyle={[atomicStyles.text, atomicStyles.textWhite]}
-            onPress={handleDone}
-            color={Colors.Primary}
-            style={[atomicStyles.mb4, styles.gotoMBTI]}
-          />
-        )}
-
-        {/*{listQuestion.length > 0 &&*/}
-        {/*  (currentIndex === listQuestion.length ? (*/}
-        {/*    <ButtonComponent*/}
-        {/*      title={translate('Hoàn thành')}*/}
-        {/*      textStyle={[atomicStyles.text, atomicStyles.textWhite]}*/}
-        {/*      onPress={handleDone}*/}
-        {/*      color={Colors.Primary}*/}
-        {/*      style={[atomicStyles.mb4, styles.gotoMBTI]}*/}
-        {/*    />*/}
-        {/*  ) : (*/}
-        {/*    <ButtonComponent*/}
-        {/*      title={translate('Tiếp theo')}*/}
-        {/*      textStyle={[atomicStyles.text, atomicStyles.textWhite]}*/}
-        {/*      onPress={() => {}}*/}
-        {/*      color={Colors.Primary}*/}
-        {/*      style={[atomicStyles.mb4, styles.gotoMBTI]}*/}
-        {/*    />*/}
-        {/*  ))}*/}
+        {listQuestion.length > 0 &&
+          (currentIndex === listQuestion.length ? (
+            <ButtonComponent
+              title={translate('Hoàn thành')}
+              textStyle={[atomicStyles.text, atomicStyles.textWhite]}
+              onPress={handleDone}
+              color={Colors.Primary}
+              style={[atomicStyles.mb4, styles.done]}
+            />
+          ) : (
+            <ButtonComponent
+              title={translate('Tiếp theo')}
+              textStyle={[atomicStyles.text, atomicStyles.textWhite]}
+              onPress={handleSelectAnswer}
+              color={Colors.Primary}
+              style={[atomicStyles.mb4, styles.gotoMBTI]}
+            />
+          ))}
       </View>
       {loading && <LoadingLayout loading={loading} />}
     </>

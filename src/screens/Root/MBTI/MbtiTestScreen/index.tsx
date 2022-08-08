@@ -3,7 +3,7 @@ import styles from './MbtiTestScreen.scss';
 import type {PropsWithChildren, ReactElement} from 'react';
 import nameof from 'ts-nameof.macro';
 import type {StackScreenProps} from '@react-navigation/stack';
-import {Text, TouchableOpacity, View} from 'react-native';
+import {StatusBar, Text, TouchableOpacity, View} from 'react-native';
 import SvgIcon from 'src/components/atoms/SvgIcon';
 import {mbtiTestScreenStyles} from './MbtiTestScreen.styles';
 import {useTranslation} from 'react-i18next';
@@ -24,6 +24,11 @@ export function MbtiTestScreen(
 
   return (
     <>
+      <StatusBar
+        barStyle="dark-content"
+        hidden={false}
+        backgroundColor={Colors.White}
+      />
       <TouchableOpacity
         style={[styles.goBack]}
         onPress={() => {

@@ -7,12 +7,15 @@ import {questionRepository} from 'src/repositories/question-repository';
 import {mbtiResultRepository} from 'src/repositories/mbti-repository';
 import type {MbtiResult} from 'src/models/MbtiResult';
 import {MbtiResultScreen} from 'src/screens/Root';
+import type {Choice} from 'src/models/Choice';
 
 export function useListQuestion(): [
   boolean,
   Question[],
   number,
-  (index: number, value: number) => void,
+  Choice,
+  (choice: Choice) => void,
+  () => void,
   () => Promise<void>,
 ] {
   const [listQuestion, setList] = React.useState<Question[]>([]);
@@ -23,17 +26,23 @@ export function useListQuestion(): [
 
   const [currentIndex, setCurrentIndex] = React.useState<number>(0);
 
+  const [currentAnswer, setCurrentAnswer] = React.useState<Choice>(undefined);
+
+  const handleSelectChoice = React.useCallback((choice: Choice) => {
+    setCurrentAnswer(choice);
+  }, []);
+
   const [listAnswer, setListAnswer] = React.useState<number[]>([]);
 
-  const handleSelectAnswer = React.useCallback(
-    (index: number, value: number) => {
-      if (index !== listQuestion.length) {
-        setCurrentIndex(index + 1);
-        setListAnswer(prevState => [...prevState, value]);
-      }
-    },
-    [listQuestion],
-  );
+  const handleSelectAnswer = React.useCallback(() => {
+    if (currentIndex !== listQuestion.length) {
+      setListAnswer(prevState => [
+        ...prevState,
+        currentAnswer.mbtiSingleTypeId,
+      ]);
+      setCurrentIndex(currentIndex + 1);
+    }
+  }, [currentAnswer, currentIndex, listQuestion]);
 
   const handleDone = React.useCallback(async () => {
     setLoading(true);
@@ -41,13 +50,13 @@ export function useListQuestion(): [
       .calcResult(listAnswer)
       .toPromise()
       .then((mbtiResult: MbtiResult) => {
+        setLoading(false);
         navigation.navigate(
           MbtiResultScreen.displayName as never,
           {
             mbtiResult: mbtiResult,
           } as never,
         );
-        setLoading(false);
       })
       .catch(error => {
         logDevError(error);
@@ -76,5 +85,13 @@ export function useListQuestion(): [
     };
   }, [navigation]);
 
-  return [loading, listQuestion, currentIndex, handleSelectAnswer, handleDone];
+  return [
+    loading,
+    listQuestion,
+    currentIndex,
+    currentAnswer,
+    handleSelectChoice,
+    handleSelectAnswer,
+    handleDone,
+  ];
 }

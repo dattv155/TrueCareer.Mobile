@@ -27,6 +27,18 @@
   elevation: 6;
 }
 
+.done {
+  padding: 8px 16px;
+  bottom: 20px;
+
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+  elevation: 6;
+
+  margin-top: 50%;
+  width: 70%;
+  align-self: center;
+}
+
 .goBack {
   position: absolute;
   z-index: 1;
