@@ -29,11 +29,12 @@ import type {Major} from 'src/models/Major';
 import {majorService} from 'src/services/major-service';
 import {mentorService} from 'src/services/mentor-service';
 import type {Mentor} from 'src/models/Mentor';
+import MainTabBar from 'src/components/organisms/MainTabBar/MainTabBar';
 
 export function HomeScreen(
   props: PropsWithChildren<HomeScreenProps>,
 ): ReactElement {
-  const {navigation} = props;
+  const {navigation, route} = props;
   const [translate] = useTranslation();
   const colorStyles = useStyle(ColorStyles);
 
@@ -350,6 +351,7 @@ export function HomeScreen(
             </View>
           </View>
         </ScrollView>
+        <MainTabBar navigation={navigation} route={route} />
       </SafeAreaView>
     </>
   );

@@ -53,7 +53,7 @@ export function MentorDetailScreen(
     <ScrollView>
       <View>
         <Image
-          source={{uri: mentor.coverImage}}
+          source={{uri: mentor?.coverImage}}
           style={[styles.coverImage]}
           resizeMode={'cover'}
         />
@@ -67,16 +67,16 @@ export function MentorDetailScreen(
           atomicStyles.justifyContentCenter,
           styles.avatarView,
         ]}>
-        <Image source={{uri: mentor.avatar}} style={[styles.avatarImage]} />
+        <Image source={{uri: mentor?.avatar}} style={[styles.avatarImage]} />
       </View>
 
       <View style={[atomicStyles.alignItemsCenter, styles.nameContainer]}>
         <Text style={[atomicStyles.textBlue, atomicStyles.h3]}>
-          {mentor.displayName}
+          {mentor?.displayName}
         </Text>
 
         <Text style={[atomicStyles.textDark, atomicStyles.h5]}>
-          {mentor.email}
+          {mentor?.email}
         </Text>
       </View>
 
@@ -91,7 +91,7 @@ export function MentorDetailScreen(
         <View>
           <Text
             style={[atomicStyles.textBlue, atomicStyles.h4, atomicStyles.bold]}>
-            {mentor.likeCount}
+            {mentor?.likeCount}
           </Text>
           <Text style={[atomicStyles.textDark, atomicStyles.h5]}>
             {translate('Theo dõi')}
@@ -101,7 +101,7 @@ export function MentorDetailScreen(
         <View>
           <Text
             style={[atomicStyles.textBlue, atomicStyles.h4, atomicStyles.bold]}>
-            {mentor.menteeCount}
+            {mentor?.menteeCount}
           </Text>
           <Text style={[atomicStyles.textDark, atomicStyles.h5]}>
             {translate('Liên kết')}

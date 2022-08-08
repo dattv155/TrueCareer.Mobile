@@ -13,6 +13,7 @@ import MentorItem from 'src/components/morecules/MentorItem';
 import {mentorService} from 'src/services/mentor-service';
 import type {Mentor} from 'src/models/Mentor';
 import {MentorDetailScreen} from 'src/screens/Root';
+import MainTabBar from 'src/components/organisms/MainTabBar/MainTabBar';
 
 export function MentorScreen(
   props: PropsWithChildren<MentorScreenProps>,
@@ -77,6 +78,7 @@ export function MentorScreen(
             ))}
           </ScrollView>
         </ScrollView>
+        <MainTabBar navigation={navigation} route={route} />
       </DefaultLayout>
     </>
   );

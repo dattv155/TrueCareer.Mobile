@@ -2,16 +2,22 @@ import React from 'react';
 import './ExploreScreen.scss';
 import type {PropsWithChildren, ReactElement} from 'react';
 import nameof from 'ts-nameof.macro';
+import MainTabBar from 'src/components/organisms/MainTabBar/MainTabBar';
+import type {StackScreenProps} from '@react-navigation/stack';
 
 export function ExploreScreen(
   props: PropsWithChildren<ExploreScreenProps>,
 ): ReactElement {
-  const {children} = props;
+  const {navigation, route} = props;
 
-  return <>{children}</>;
+  return (
+    <>
+      <MainTabBar navigation={navigation} route={route} />
+    </>
+  );
 }
 
-export interface ExploreScreenProps {
+export interface ExploreScreenProps extends StackScreenProps<any> {
   //
 }
 
