@@ -6,4 +6,5 @@ export class MbtiPersonalType extends Model {
   public name?: string;
 
   public code?: string;
+  public value?: string;
 }

@@ -1,0 +1,36 @@
+/**
+ * MbtiTestScreen
+ * 2022-08-03 11:27:29
+ */
+@import "src/styles/mixins";
+
+.container {
+  margin-top: 40%;
+  background-color: map-get($colors, 'primary');
+  flex: 1;
+  z-index: -1;
+}
+
+.contentContainer {
+  margin-top: 40%;
+  align-items: center;
+}
+
+.gotoMBTI {
+  padding: 8px 16px;
+  position: absolute;
+  bottom: 20px;
+  right: 16px;
+  left: 16px;
+
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+  elevation: 6;
+}
+
+.goBack {
+  position: absolute;
+  z-index: 1;
+  top: 16px;
+  left: 16px;
+  padding: 8px;
+}

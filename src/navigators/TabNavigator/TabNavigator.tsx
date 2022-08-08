@@ -28,9 +28,9 @@ const {Navigator, Screen} = createBottomTabNavigator();
 const tabs: FC<PropsWithChildren<any>>[] = [
   HomeScreen,
   MentorScreen,
-  ProfileScreen,
   ExploreScreen,
   StudyScreen,
+  ProfileScreen,
 ];
 
 export function TabNavigator(

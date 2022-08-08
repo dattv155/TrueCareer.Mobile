@@ -5,7 +5,7 @@ import type {School} from 'src/models/School';
 import {SchoolFilter} from 'src/models/School';
 import {schoolRepository} from 'src/repositories/school-repository';
 
-export function useListSchool() {
+export function useListSchool(): [School[]] {
   const [listSchool, setList] = React.useState<School[]>([]);
 
   const navigation = useNavigation();

@@ -16,6 +16,7 @@ import {useRecoilValue} from 'recoil';
 import {appUserAtom} from 'src/store/atoms/appUserAtom';
 import {mentorMenteeRepository} from 'src/repositories/mentor-mentee-repository';
 import {logDevError} from 'src/helpers/dev.helper';
+import {mentorService} from 'src/services/mentor-service';
 
 export function MentorDetailScreen(
   props: PropsWithChildren<MentorDetailScreenProps>,
@@ -25,7 +26,7 @@ export function MentorDetailScreen(
 
   const {mentor} = route.params;
 
-  // const [listInformation, loading] = mentorService.useMentorDetail(mentor);
+  const [listInformation, loading] = mentorService.useMentorDetail(mentor);
 
   const appUser = useRecoilValue(appUserAtom);
 

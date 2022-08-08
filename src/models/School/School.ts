@@ -8,4 +8,10 @@ export class School extends Model {
   public description?: string;
 
   public rowId?: string;
+  public address?: string;
+  public completeTime?: string;
+  public phoneNumber?: string;
+  public rating?: number;
+  public schoolImage?: string;
+  public studentCount?: number;
 }

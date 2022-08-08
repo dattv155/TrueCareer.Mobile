@@ -1,6 +1,6 @@
 import {Model} from 'react3l-common';
-import type {MbtiPersonalType} from 'models/MbtiPersonalType';
-import type {AppUser} from 'models/AppUser';
+import type {AppUser} from '../AppUser';
+import type {MbtiPersonalType} from '../MbtiPersonalType';
 
 export class MbtiResult extends Model {
   public userId?: number;
