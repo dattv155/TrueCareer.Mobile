@@ -6,12 +6,13 @@ import type {StackScreenProps} from '@react-navigation/stack';
 import {useTranslation} from 'react-i18next';
 import DefaultLayout from 'src/components/templates/DefaultLayout';
 import SvgIcon from 'src/components/atoms/SvgIcon';
-import {atomicStyles} from 'src/styles';
+import {atomicStyles, Colors} from 'src/styles';
 import {useRecoilValue} from 'recoil';
 import {globalUserAtom} from 'src/store/atoms/globalUserAtom';
 import {conversationService} from 'src/services/conversation-service';
 import ConversationChatScreen from '../ConversationChatScreen';
 import ConversationFlatList from 'src/components/organisms/ConversationFlatList';
+import {StatusBar} from 'react-native';
 
 export function ConversationListScreen(
   props: PropsWithChildren<ConversationListScreenProps>,
@@ -26,6 +27,11 @@ export function ConversationListScreen(
 
   return (
     <>
+      <StatusBar
+        barStyle="dark-content"
+        hidden={false}
+        backgroundColor={Colors.Primary}
+      />
       <DefaultLayout
         title={translate('Không gian tư vấn')}
         subTitle={translate(

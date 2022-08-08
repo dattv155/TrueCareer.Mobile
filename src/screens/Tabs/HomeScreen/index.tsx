@@ -8,6 +8,7 @@ import {
   Image,
   ImageBackground,
   ScrollView,
+  StatusBar,
   Text,
   TouchableOpacity,
   View,
@@ -155,6 +156,11 @@ export function HomeScreen(
 
   return (
     <>
+      <StatusBar
+        barStyle="dark-content"
+        hidden={false}
+        backgroundColor={Colors.Secondary}
+      />
       <SafeAreaView style={[atomicStyles.flexGrow, styles.container]}>
         <ScrollView>
           <View
