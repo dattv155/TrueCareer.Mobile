@@ -144,6 +144,7 @@ export function ProfileScreen(
           color={Colors.Red}
           style={[atomicStyles.mb4, styles.logOut]}
         />
+        <View style={styles.bottomHeight} />
       </ScrollView>
       <MainTabBar navigation={navigation} route={route} />
     </>

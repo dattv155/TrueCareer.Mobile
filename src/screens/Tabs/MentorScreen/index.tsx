@@ -1,5 +1,5 @@
 import React from 'react';
-import './MentorScreen.scss';
+import styles from './MentorScreen.scss';
 import type {PropsWithChildren, ReactElement} from 'react';
 import nameof from 'ts-nameof.macro';
 import type {StackScreenProps} from '@react-navigation/stack';
@@ -77,6 +77,7 @@ export function MentorScreen(
               />
             ))}
           </ScrollView>
+          <View style={styles.bottomHeight} />
         </ScrollView>
         <MainTabBar navigation={navigation} route={route} />
       </DefaultLayout>

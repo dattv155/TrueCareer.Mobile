@@ -20,7 +20,13 @@ import type {StackScreenProps} from '@react-navigation/stack';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {ColorStyles} from 'src/styles/themes';
 import {useStyle} from 'react-native-redux-theming';
-import {ConversationListScreen, MbtiTestScreen} from 'src/screens/Root';
+import {
+  ConversationListScreen,
+  MajorDetailScreen,
+  MbtiTestScreen,
+  MentorDetailScreen,
+  SchoolDetailScreen,
+} from 'src/screens/Root';
 import {useRecoilValue} from 'recoil';
 import {appUserAtom} from 'src/store/atoms/appUserAtom';
 import ButtonComponent from 'src/components/atoms/ButtonComponent';
@@ -53,10 +59,33 @@ export function HomeScreen(
   const [listSchool] = schoolService.useListSchool();
   const [listMajor] = majorService.useListMajor();
 
+  const handleGotoSchoolDetail = React.useCallback(
+    (school: School) => {
+      navigation.navigate(SchoolDetailScreen.displayName, {school: school});
+    },
+    [navigation],
+  );
+
+  const handleGotoMajorDetail = React.useCallback(
+    (major: Major) => {
+      navigation.navigate(MajorDetailScreen.displayName, {major: major});
+    },
+    [navigation],
+  );
+
+  const handleGotoMentorDetail = React.useCallback(
+    (mentor: Mentor) => {
+      navigation.navigate(MentorDetailScreen.displayName, {mentor: mentor});
+    },
+    [navigation],
+  );
+
   const renderMentor: ListRenderItem<Mentor> = React.useCallback(
     ({item}: ListRenderItemInfo<Mentor>) => {
       return (
-        <TouchableOpacity style={[atomicStyles.mr4, styles.mentorView]}>
+        <TouchableOpacity
+          style={[atomicStyles.mr4, styles.mentorView]}
+          onPress={() => handleGotoMentorDetail(item)}>
           <Image source={{uri: item.avatar}} style={[styles.mentorImage]} />
           <View style={[atomicStyles.m3, atomicStyles.alignItemsCenter]}>
             <Text
@@ -93,13 +122,15 @@ export function HomeScreen(
         </TouchableOpacity>
       );
     },
-    [],
+    [handleGotoMentorDetail],
   );
 
   const renderSchool: ListRenderItem<School> = React.useCallback(
     ({item}: ListRenderItemInfo<School>) => {
       return (
-        <TouchableOpacity style={[atomicStyles.mr4, styles.schoolView]}>
+        <TouchableOpacity
+          style={[atomicStyles.mr4, styles.schoolView]}
+          onPress={() => handleGotoSchoolDetail(item)}>
           <Image
             source={{uri: item.schoolImage}}
             style={[styles.schoolImage]}
@@ -128,13 +159,15 @@ export function HomeScreen(
         </TouchableOpacity>
       );
     },
-    [],
+    [handleGotoSchoolDetail],
   );
 
   const renderMajor: ListRenderItem<Major> = React.useCallback(
     ({item}: ListRenderItemInfo<Major>) => {
       return (
-        <TouchableOpacity style={[atomicStyles.mr4, styles.majorView]}>
+        <TouchableOpacity
+          style={[atomicStyles.mr4, styles.majorView]}
+          onPress={() => handleGotoMajorDetail(item)}>
           <Image source={{uri: item.majorImage}} style={[styles.majorImage]} />
           <View style={[atomicStyles.m3]}>
             <Text
@@ -151,7 +184,7 @@ export function HomeScreen(
         </TouchableOpacity>
       );
     },
-    [],
+    [handleGotoMajorDetail],
   );
 
   return (
@@ -356,6 +389,7 @@ export function HomeScreen(
               />
             </View>
           </View>
+          <View style={styles.bottomHeight} />
         </ScrollView>
         <MainTabBar navigation={navigation} route={route} />
       </SafeAreaView>

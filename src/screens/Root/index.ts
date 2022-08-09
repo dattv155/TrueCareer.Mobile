@@ -7,3 +7,6 @@ export * from './Conversation/ConversationChatScreen';
 export * from './MBTI/MbtiTestScreen';
 export * from './MBTI/MbtiTestDetailScreen';
 export * from './MBTI/MbtiResultScreen';
+
+export * from './SchoolMajor/SchoolDetailScreen';
+export * from './SchoolMajor/MajorDetailScreen';
