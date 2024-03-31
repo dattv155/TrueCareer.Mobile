@@ -5,9 +5,10 @@ import type {SignalService} from 'src/services/signalr-service/index';
 import {ConversationEndpoints, server} from 'src/config';
 import store from 'src/store';
 import {conversationSlice} from 'src/store/conversation';
-import {getRecoil} from 'recoil-nexus';
+import {getRecoil, setRecoil} from 'recoil-nexus';
 import {appUserAtom} from 'src/store/atoms/appUserAtom';
 import {ConversationMessage} from 'react-native-truesight-chat';
+import {conversationMessageAtom} from 'src/store/atoms/conversationMessageAtom';
 
 const METHOD_NAME: string = 'ReceiveMessage';
 
@@ -40,6 +41,7 @@ export async function hubConnectionSignalr(this: SignalService) {
           );
           // eslint-disable-next-line no-console
           console.log(conversationId, action, conversationMessage);
+          setRecoil(conversationMessageAtom, conversationMessage);
           store.dispatch(
             conversationSlice.actions.setMessage(conversationMessage),
           );

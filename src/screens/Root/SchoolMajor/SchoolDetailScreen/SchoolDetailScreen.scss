@@ -1,0 +1,27 @@
+/**
+ * SchoolDetailScreen
+ * 2022-08-09 07:17:49
+ */
+@import "src/styles/mixins";
+
+.imageView {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.bottomLine {
+  border: map-get($colors, 'secondary');
+  border-width: 0 0 2px 0;
+}
+
+.bottomHeight {
+  margin-bottom: 25px;
+}
+
+.goBack {
+  position: absolute;
+  z-index: 2;
+  top: 16px;
+  left: 16px;
+  padding: 8px;
+}

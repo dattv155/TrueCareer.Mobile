@@ -6,4 +6,5 @@ export class Major extends Model {
   public name?: string;
 
   public description?: string;
+  public majorImage?: string;
 }

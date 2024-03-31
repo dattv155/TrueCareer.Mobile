@@ -1,8 +1,8 @@
-import type { Dispatch, Reducer } from 'react';
+import type {Dispatch, Reducer} from 'react';
 import React from 'react';
-import type { Observable, Subscription } from 'rxjs';
-import { forkJoin } from 'rxjs';
-import type { Model, ModelFilter } from 'react3l-common';
+import type {Observable, Subscription} from 'rxjs';
+import {forkJoin} from 'rxjs';
+import type {Model, ModelFilter} from 'react3l-common';
 
 const DEFAULT_TAKE = 10;
 
@@ -26,9 +26,9 @@ export interface ListData<T extends Model, TFilter extends ModelFilter> {
 }
 
 export interface ListAction<
-  T extends Model & { id?: number },
+  T extends Model & {id?: number},
   TFilter extends ModelFilter,
-  P extends keyof TFilter
+  P extends keyof TFilter,
 > {
   type: Action;
 
@@ -65,9 +65,9 @@ export enum Action {
 }
 
 export function listReducer<
-  T extends Model & { id?: number },
+  T extends Model & {id?: number},
   TFilter extends ModelFilter,
-  P extends keyof TFilter
+  P extends keyof TFilter,
 >(state: ListData<any, any>, action: ListAction<T, TFilter, P>) {
   switch (action.type) {
     case Action.refreshList:
@@ -101,16 +101,16 @@ export function listReducer<
         Object.entries(state.list).map(([startSkip, list]) => {
           return [
             startSkip,
-            list.map((item) => {
+            list.map(item => {
               if (action.item !== undefined && item.id === action.item.id) {
                 return action.item;
               }
               return item;
             }),
           ];
-        })
+        }),
       );
-      return { ...state };
+      return {...state};
 
     case Action.searchList:
       const isStringField: boolean = typeof action.searchType === 'undefined';
@@ -196,9 +196,9 @@ export function listReducer<
 }
 
 export function useList<
-  T extends Model & { id?: number },
+  T extends Model & {id?: number},
   TFilter extends ModelFilter,
-  P extends keyof TFilter = any
+  P extends keyof TFilter = any,
 >(
   FilterClass: new () => TFilter,
   getList: (filter: TFilter) => Observable<T[]>,
@@ -206,7 +206,7 @@ export function useList<
   searchField: P,
   searchType?: keyof TFilter[P] | string,
   defaultFilter?: TFilter,
-  take?: number
+  take?: number,
 ): [
   // List Data
   T[],
@@ -218,7 +218,7 @@ export function useList<
   () => void,
   () => void,
   (searchValue: string) => void,
-  Dispatch<ListAction<T, TFilter, P>>
+  Dispatch<ListAction<T, TFilter, P>>,
 ] {
   const [
     {
@@ -267,21 +267,20 @@ export function useList<
 
   React.useEffect(() => {
     const subscription: Subscription = handleLoadList().subscribe({
-      next: ([list, total]: [T[], number]) => {
+      next: ([_list, _total]: [T[], number]) => {
         dispatch({
           type: Action.loadingSuccess,
         });
         dispatch({
           type: Action.setList,
-          list,
-          total,
+          list: _list,
+          total: _total,
         });
       },
       error: () => {
         dispatch({
           type: Action.loadingFail,
         });
-        console.log('Server error!');
       },
     });
     dispatch({
@@ -307,7 +306,9 @@ export function useList<
       arrayList.length < total! &&
       arrayList.length >= (take ?? DEFAULT_TAKE) &&
       total! > 0 &&
-      loading !== LoadingStatus.PROGRESSING
+      loading !== LoadingStatus.PROGRESSING &&
+      getList &&
+      getCount
     ) {
       dispatch({
         type: Action.loadingProcess,
@@ -317,7 +318,7 @@ export function useList<
         take: take,
       });
     }
-  }, [arrayList.length, loading, take, total]);
+  }, [arrayList.length, getCount, getList, loading, take, total]);
 
   const handleSearch = React.useCallback(
     (searchValue: string) => {
@@ -332,7 +333,7 @@ export function useList<
         take,
       });
     },
-    [searchField, searchType, take]
+    [searchField, searchType, take],
   );
 
   return [

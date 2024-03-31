@@ -22,6 +22,11 @@ export const themeSlice = createThemeSlice<ThemeStyle>({
       lightColor: '#FFFFFF',
       darkColor: '#161616',
       mutedColor: '#FFFFFF',
+
+      messageBackgroundColor: '#6979F8',
+      messageBackgroundOtherColor: '#FFFFFF',
+      messageTextPrimaryColor: '#FFFFFF',
+      messageTextSecondaryColor: '#232323',
     },
   },
 });

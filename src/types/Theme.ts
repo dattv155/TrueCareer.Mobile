@@ -22,6 +22,11 @@ export interface ThemeStyle {
   secondaryTextColor: string;
 
   borderColor: string;
+
+  messageTextPrimaryColor: string;
+  messageBackgroundColor: string;
+  messageBackgroundOtherColor: string;
+  messageTextSecondaryColor: string;
 }
 
 export enum ThemeType {

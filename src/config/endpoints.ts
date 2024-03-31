@@ -34,4 +34,6 @@ export enum Endpoints {
   MENTOR_HREF = '/rpc/truecareer/mentor',
   INFORMATION_HREF = '/rpc/truecareer/information',
   MENTOR_MENTEE_CONNECTION_HREF = '/rpc/truecareer/mentor-mentee-connection',
+  QUESTION_HREF = '/rpc/truecareer/question',
+  MBTI_RESULT_HREF = '/rpc/truecareer/mbti-result',
 }

@@ -1,0 +1,34 @@
+/**
+ * MbtiResultScreen
+ * 2022-08-03 11:27:49
+ */
+@import "src/styles/mixins";
+
+.container {
+  margin-top: 30%;
+  background-color: map-get($colors, 'white');
+  flex: 1;
+  z-index: -1;
+}
+
+.contentContainer {
+  margin-top: 40%;
+  align-items: center;
+}
+
+.goBack {
+  position: absolute;
+  z-index: 1;
+  top: 16px;
+  left: 16px;
+  padding: 8px;
+}
+
+.resultCodeView {
+  border-radius: 5px;
+  padding: 0 16px;
+}
+
+.resultDetail {
+  text-align: justify;
+}

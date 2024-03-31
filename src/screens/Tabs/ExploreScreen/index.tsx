@@ -1,17 +1,25 @@
 import React from 'react';
-import './ExploreScreen.scss';
+import styles from './ExploreScreen.scss';
 import type {PropsWithChildren, ReactElement} from 'react';
 import nameof from 'ts-nameof.macro';
+import MainTabBar from 'src/components/organisms/MainTabBar/MainTabBar';
+import type {StackScreenProps} from '@react-navigation/stack';
+import {View} from 'react-native';
 
 export function ExploreScreen(
   props: PropsWithChildren<ExploreScreenProps>,
 ): ReactElement {
-  const {children} = props;
+  const {navigation, route} = props;
 
-  return <>{children}</>;
+  return (
+    <>
+      <View style={styles.bottomHeight} />
+      <MainTabBar navigation={navigation} route={route} />
+    </>
+  );
 }
 
-export interface ExploreScreenProps {
+export interface ExploreScreenProps extends StackScreenProps<any> {
   //
 }
 

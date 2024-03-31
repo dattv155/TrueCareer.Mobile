@@ -1,4 +1,8 @@
 import DeviceInfo from 'react-native-device-info';
+import type {
+  Conversation,
+  ConversationParticipant,
+} from 'react-native-truesight-chat';
 
 export function numberOfLines(title: string, lengthChar?: number) {
   return (
@@ -78,4 +82,51 @@ export function isBelowIphoneX() {
   const deviceId = DeviceInfo.getDeviceId();
   const regex = new RegExp('iPhone[1-9],[1-9]|iPhone10,[1245]|iPod');
   return regex.test(deviceId);
+}
+
+export function getConversationName(
+  conversation: Conversation,
+  globalUser?: any,
+): string | undefined {
+  if (conversation) {
+    if (conversation?.name) {
+      return conversation.name;
+    }
+    if (
+      conversation?.conversationParticipants &&
+      conversation?.conversationParticipants.length > 0
+    ) {
+      if (conversation?.conversationParticipants?.length === 1) {
+        const user = conversation.conversationParticipants[0];
+        return user?.globalUser?.displayName;
+      }
+      if (conversation?.conversationParticipants?.length === 2) {
+        const [other] = conversation.conversationParticipants?.filter(
+          (e: ConversationParticipant) => e.globalUserId !== globalUser?.id,
+        );
+        if (other) {
+          return other?.globalUser?.displayName;
+        }
+      }
+      let name = '';
+      conversation?.conversationParticipants.forEach(
+        (item: ConversationParticipant, index: number) => {
+          if (index === 0) {
+            name =
+              name + (index > 0 ? ', ' : '') + item?.globalUser?.displayName;
+          }
+        },
+      );
+      return name;
+    }
+  }
+  return '';
+}
+
+export function getDate(date: string) {
+  if (date) {
+    let currentDate = new Date(date);
+    return currentDate.setUTCHours(0, 0, 0, 0);
+  }
+  return new Date();
 }
